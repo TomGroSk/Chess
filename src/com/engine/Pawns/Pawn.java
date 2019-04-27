@@ -1,43 +1,19 @@
 package com.engine.Pawns;
 
+import com.engine.Alliance;
+import com.engine.Board.Board;
+import com.engine.Board.Move;
+
+import java.util.List;
+
 public abstract class Pawn {
-    int coordinateX, coordinateY;
+    protected final int position;
+    protected final Alliance alliance;
 
-    Pawn(int coordinateX, int coordinateY) {
-        this.coordinateX = coordinateX;
-        this.coordinateY = coordinateY;
+    Pawn(final int position, final Alliance alliance){
+        this.position = position;
+        this.alliance = alliance;
     }
-    public abstract boolean isEmpty();
-    public abstract Pawn getPawn();
-
-    public static final class EmptyPawn extends Pawn{
-        EmptyPawn(int coordinateX, int coordinateY) {
-            super(coordinateX, coordinateY);
-        }
-        @Override
-        public boolean isEmpty(){
-            return true;
-        }
-        @Override
-        public Pawn getPawn(){
-            return null;
-        }
-    }
-
-    public static final class OccupiedPawn extends Pawn{
-        Pawn pawn;
-        OccupiedPawn(int coordinateX, int coordinateY, Pawn pawn){
-            super(coordinateX, coordinateY);
-            this.pawn=pawn;
-        }
-        @Override
-        public boolean isEmpty(){
-            return false;
-        }
-        @Override
-        public Pawn getPawn(){
-            return this.pawn;
-        }
-    }
+     public abstract List<Move> calculatePossibleMoves(final Board board);
 }
 
