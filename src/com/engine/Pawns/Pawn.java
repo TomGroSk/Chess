@@ -14,9 +14,11 @@ public abstract class Pawn {
         EmptyPawn(int coordinateX, int coordinateY) {
             super(coordinateX, coordinateY);
         }
+        @Override
         public boolean isEmpty(){
             return true;
         }
+        @Override
         public Pawn getPawn(){
             return null;
         }
@@ -28,9 +30,11 @@ public abstract class Pawn {
             super(coordinateX, coordinateY);
             this.pawn=pawn;
         }
+        @Override
         public boolean isEmpty(){
             return false;
         }
+        @Override
         public Pawn getPawn(){
             return this.pawn;
         }
