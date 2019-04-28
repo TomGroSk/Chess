@@ -11,22 +11,21 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class Kinght extends Pawn {
+public class Knight extends Pawn {
     private static int [] possiblyMoveTable = {-17,-15,-10,-6,6,10,15,17};
 
-    Kinght(final int position, final Alliance alliance) {
+    Knight(final int position, final Alliance alliance) {
         super(position, alliance);
     }
 
     @Override
-    public Collection<Move> calculatePossibleMoves(Board board) {
+    public Collection<Move> calculatePossibleMoves(final Board board) {
         int temp;
         final List<Move> possibleMoves = new ArrayList<>();
 
         for(final int currentPossibleMove: possiblyMoveTable){
             temp = this.position + currentPossibleMove;
-
-            if(BoardUtils.isValidCoodinate(temp)){
+            if(BoardUtils.isValidCoordinate(temp)){
                 if(isAtFirstColumn(this.position, currentPossibleMove) ||
                         isAtSecondColumn(this.position, currentPossibleMove) ||
                         isAtSeventhColumn(this.position, currentPossibleMove) ||
@@ -36,17 +35,16 @@ public class Kinght extends Pawn {
                 }
                 final Field possiblyDestinationField = board.getField(temp);
                 if(possiblyDestinationField.isEmpty()){
-                    possibleMoves.add(new Move());
+                    possibleMoves.add(new Move.majorMove(board, this, temp));
                 }
                 else{
                     final Pawn pawnAtDestination = possiblyDestinationField.getPawn();
                     final Alliance pawnAlliance = pawnAtDestination.getAlliance();
                     if(this.alliance != pawnAlliance){
-                        possibleMoves.add(new Move());
+                        possibleMoves.add(new Move.attackMove(board, this, pawnAtDestination, temp));
                     }
                 }
             }
-
         }
         return ImmutableList.copyOf(possibleMoves);
     }
@@ -62,6 +60,6 @@ public class Kinght extends Pawn {
     }
     private static boolean isAtEighthColumn(final int currentPosition, final int candidateMove){
         return BoardUtils.eighthColumn[currentPosition] && ((candidateMove==-15) || (candidateMove==-6) ||
-                (candidateMove==17) ||(candidateMove==10));
+                (candidateMove==10) ||(candidateMove==17));
     }
 }
