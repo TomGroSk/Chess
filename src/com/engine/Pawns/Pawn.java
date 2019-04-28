@@ -4,7 +4,7 @@ import com.engine.Alliance;
 import com.engine.Board.Board;
 import com.engine.Board.Move;
 
-import java.util.List;
+import java.util.Collection;
 
 public abstract class Pawn {
     protected final int position;
@@ -14,6 +14,10 @@ public abstract class Pawn {
         this.position = position;
         this.alliance = alliance;
     }
-     public abstract List<Move> calculatePossibleMoves(final Board board);
+    public Alliance getAlliance(){
+        return this.alliance;
+    }
+
+    public abstract Collection<Move> calculatePossibleMoves(final Board board);
 }
 
