@@ -1,4 +1,4 @@
-package com.engine.Pawns;
+package com.engine.Figures;
 
 import com.engine.Alliance;
 import com.engine.Board.Board;
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class Knight extends Pawn {
+public class Knight extends Figure {
     private static int [] possiblyMoveTable = {-17,-15,-10,-6,6,10,15,17};
 
     Knight(final int position, final Alliance alliance) {
@@ -35,13 +35,13 @@ public class Knight extends Pawn {
                 }
                 final Field possiblyDestinationField = board.getField(temp);
                 if(possiblyDestinationField.isEmpty()){
-                    possibleMoves.add(new Move.majorMove(board, this, temp));
+                    possibleMoves.add(new Move.MajorMove(board, this, temp));
                 }
                 else{
-                    final Pawn pawnAtDestination = possiblyDestinationField.getPawn();
-                    final Alliance pawnAlliance = pawnAtDestination.getAlliance();
-                    if(this.alliance != pawnAlliance){
-                        possibleMoves.add(new Move.attackMove(board, this, pawnAtDestination, temp));
+                    final Figure figureAtDestination = possiblyDestinationField.getFigure();
+                    final Alliance figureAlliance = figureAtDestination.getAlliance();
+                    if(this.alliance != figureAlliance){
+                        possibleMoves.add(new Move.AttackMove(board, this, figureAtDestination, temp));
                     }
                 }
             }

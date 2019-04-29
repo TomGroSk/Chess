@@ -1,7 +1,7 @@
 package com.engine.Board;
 
 
-import com.engine.Pawns.Pawn;
+import com.engine.Figures.Figure;
 import com.google.common.collect.ImmutableMap;
 
 import java.util.HashMap;
@@ -24,12 +24,12 @@ public abstract class Field {
         this.coordinate = coordinate;
     }
 
-    public static Field createField(final int coordinate, Pawn pawn){
-        return pawn != null ? new Field.OccupiedField(coordinate, pawn) : EMPTY_FIELDS.get(coordinate);
+    public static Field createField(final int coordinate, Figure figure){
+        return figure != null ? new Field.OccupiedField(coordinate, figure) : EMPTY_FIELDS.get(coordinate);
     }
 
     public abstract boolean isEmpty();
-    public abstract Pawn getPawn();
+    public abstract Figure getFigure();
 
 
 
@@ -44,25 +44,25 @@ public abstract class Field {
             return true;
         }
         @Override
-        public Pawn getPawn(){
+        public Figure getFigure(){
             return null;
         }
     }
 
 
     public static final class OccupiedField extends Field{
-        private final Pawn pawn;
-        private OccupiedField(int coordinate, Pawn pawn){
+        private final Figure figure;
+        private OccupiedField(int coordinate, Figure figure){
             super(coordinate);
-            this.pawn=pawn;
+            this.figure = figure;
         }
         @Override
         public boolean isEmpty(){
             return false;
         }
         @Override
-        public Pawn getPawn(){
-            return this.pawn;
+        public Figure getFigure(){
+            return this.figure;
         }
     }
 }
