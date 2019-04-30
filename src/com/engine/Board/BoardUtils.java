@@ -6,6 +6,9 @@ public class BoardUtils {
     public static boolean[] seventhColumn = initColumn(6);
     public static boolean[] eighthColumn = initColumn(7);
 
+    public static boolean[] secondRow = null;
+    public static boolean[] seventhRow = null;
+
     public final static int numFields = 64;
     public final static int numFieldsPerRow = 8;
 
