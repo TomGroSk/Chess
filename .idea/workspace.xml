@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26af3ecc-41d4-492a-a259-8e0de34de75e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/engine/Figures/King.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engine/Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engine/Alliance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engine/Board/BoardUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engine/Board/BoardUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engine/Board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engine/Board/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engine/Figures/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engine/Figures/Figure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engine/Figures/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engine/Figures/Pawn.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,12 +17,13 @@
     <session id="-1697571717">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -41,13 +39,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="12" />
-          <entry key="java" value="3941" />
+          <entry key="java" value="4566" />
           <entry key="txt" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3941" />
+          <entry key="JAVA" value="4566" />
           <entry key="PLAIN_TEXT" value="33" />
         </counts>
       </usages-collector>
@@ -70,21 +68,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/engine/Figures/Pawn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-220">
+            <state relative-caret-position="221">
               <caret line="23" column="59" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#225#226#0" expanded="true" />
-                <element signature="e#266#267#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/engine/Alliance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="255">
               <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
               <folding>
                 <element signature="e#194#195#0" expanded="true" />
@@ -99,12 +95,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/engine/Figures/King.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="40" column="72" lean-forward="true" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
+            <state relative-caret-position="459">
+              <caret line="40" column="72" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#226#227#0" expanded="true" />
-                <element signature="e#267#268#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,12 +116,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/engine/Figures/Figure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+            <state relative-caret-position="391">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#563#564#0" expanded="true" />
                 <element signature="e#602#603#0" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
+                <element signature="e#668#669#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,7 +132,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/engine/Figures/Knight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
+            <state relative-caret-position="306">
               <caret line="29" column="76" selection-start-line="28" selection-start-column="19" selection-end-line="29" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -145,14 +141,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/engine/Board/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+            <state relative-caret-position="374">
+              <caret line="28" column="37" selection-end-line="55" />
               <folding>
-                <element signature="e#96#97#0" expanded="true" />
-                <element signature="e#123#124#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,7 +176,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/Field.java" />
         <option value="$PROJECT_DIR$/src/com/Pawn.java" />
-        <option value="$PROJECT_DIR$/src/com/engine/Board/Board.java" />
         <option value="$PROJECT_DIR$/src/com/engine/Pawns/Pawn.java" />
         <option value="$PROJECT_DIR$/src/com/engine/Pawns/Kinght.java" />
         <option value="$PROJECT_DIR$/src/com/engine/Board/Field.java" />
@@ -194,11 +188,12 @@
         <option value="$PROJECT_DIR$/src/com/engine/Figures/Bishop.java" />
         <option value="$PROJECT_DIR$/src/com/engine/Figures/Rook.java" />
         <option value="$PROJECT_DIR$/src/com/engine/Figures/Queen.java" />
-        <option value="$PROJECT_DIR$/src/com/engine/Figures/Figure.java" />
         <option value="$PROJECT_DIR$/src/com/engine/Board/BoardUtils.java" />
         <option value="$PROJECT_DIR$/src/com/engine/Alliance.java" />
         <option value="$PROJECT_DIR$/src/com/engine/Figures/Pawn.java" />
         <option value="$PROJECT_DIR$/src/com/engine/Figures/King.java" />
+        <option value="$PROJECT_DIR$/src/com/engine/Figures/Figure.java" />
+        <option value="$PROJECT_DIR$/src/com/engine/Board/Board.java" />
       </list>
     </option>
   </component>
@@ -217,6 +212,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,7 +249,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,7 +315,7 @@
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.14133738" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.14589666" />
       <window_info id="Structure" order="1" sideWeight="0.50163937" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -357,16 +352,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/engine/Board/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/engine/Figures/Bishop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -394,17 +379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/engine/Board/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding>
-            <element signature="e#96#97#0" expanded="true" />
-            <element signature="e#123#124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/engine/Figures/Rook.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -415,10 +389,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/engine/Figures/Knight.java">
+    <entry file="file://$PROJECT_DIR$/src/com/engine/Board/Field.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="29" column="76" selection-start-line="28" selection-start-column="19" selection-end-line="29" selection-end-column="76" />
+        <state relative-caret-position="289">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/engine/Figures/Pawn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="23" column="59" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/engine/Alliance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding>
+            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/engine/Figures/King.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="40" column="72" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -434,49 +441,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/engine/Figures/Figure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        <state relative-caret-position="391">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#563#564#0" expanded="true" />
             <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/engine/Figures/King.java">
+    <entry file="file://$PROJECT_DIR$/src/com/engine/Figures/Knight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="40" column="72" lean-forward="true" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
+        <state relative-caret-position="306">
+          <caret line="29" column="76" selection-start-line="28" selection-start-column="19" selection-end-line="29" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/engine/Figures/Pawn.java">
+    <entry file="file://$PROJECT_DIR$/src/com/engine/Board/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="23" column="59" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="59" />
+        <state relative-caret-position="374">
+          <caret line="28" column="37" selection-end-line="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/engine/Alliance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <element signature="e#194#195#0" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
           </folding>
         </state>
       </provider>

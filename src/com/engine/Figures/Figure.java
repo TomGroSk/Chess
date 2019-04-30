@@ -22,6 +22,9 @@ public abstract class Figure {
     public boolean isFirstMove(){
         return this.isFirstMove;
     }
+    public int getPosition(){
+        return this.position;
+    }
 
     public abstract Collection<Move> calculatePossibleMoves(final Board board);
 }
