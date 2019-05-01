@@ -7,6 +7,7 @@ import com.engine.Board.Move;
 import com.engine.Figures.Figure;
 import com.engine.Figures.King;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Iterables;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,13 +21,13 @@ public abstract class Player {
 
     Player(final Board board, final Collection<Move> playerMoves, final Collection<Move> opponentMoves){
         this.board = board;
-        this.playerMoves = playerMoves;
+        this.playerMoves = ImmutableList.copyOf(Iterables.concat(playerMoves, calculateKingCastles(playerMoves, opponentMoves)));
         this.playerKing = establishKing();
         this.isInCheck=!Player.calculateAttackOnField(this.playerKing.getPosition(), opponentMoves).isEmpty();
     }
 
 
-    private static Collection<Move> calculateAttackOnField(int position, Collection<Move> opponentMoves) {
+    protected static Collection<Move> calculateAttackOnField(int position, Collection<Move> opponentMoves) {
         final List<Move> attacksMoves = new ArrayList<>();
         for(final Move move: opponentMoves){
             if(position == move.getDestinationCoordinate()){
@@ -99,4 +100,6 @@ public abstract class Player {
     public abstract Collection<Figure> getActiveFigures();
     public abstract Alliance getAlliance();
     public abstract Player getOpponent();
+    protected abstract Collection<Move> calculateKingCastles(Collection<Move> playerLegals,
+                                                             Collection<Move>opponentsLegals);
 }

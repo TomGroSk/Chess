@@ -66,4 +66,8 @@ public class Knight extends Figure {
     public String toString(){
         return FigureType.KNIGHT.toString();
     }
+    @Override
+    public Knight moveFigure(Move move) {
+        return new Knight(move.getDestinationCoordinate(), move.getMovedFigure().getAlliance());
+    }
 }

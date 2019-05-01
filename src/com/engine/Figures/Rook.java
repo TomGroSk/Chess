@@ -17,7 +17,10 @@ public class Rook extends Figure {
     public Rook(int position, Alliance alliance) {
         super(position, alliance, FigureType.ROOK);
     }
-
+    @Override
+    public Rook moveFigure(Move move) {
+        return new Rook(move.getDestinationCoordinate(), move.getMovedFigure().getAlliance());
+    }
     @Override
     public Collection<Move> calculatePossibleMoves(Board board) {
         final List<Move> possibleMoves = new ArrayList<>();

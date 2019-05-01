@@ -10,7 +10,9 @@ import java.util.Map;
 public abstract class Field {
     protected final int coordinate;
     private static final Map<Integer, EmptyField> EMPTY_FIELDS = createAllEmptyFields();
-
+    public int getFieldCoordinate(){
+        return this.coordinate;
+    }
     private static Map<Integer, EmptyField> createAllEmptyFields() {
         final Map<Integer, EmptyField> emptyFieldMap = new HashMap<>();
 

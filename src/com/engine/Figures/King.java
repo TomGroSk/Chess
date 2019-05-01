@@ -48,6 +48,12 @@ public class King extends Figure {
         }
         return ImmutableList.copyOf(possibleMoves);
     }
+
+    @Override
+    public King moveFigure(Move move) {
+        return new King(move.getDestinationCoordinate(), move.getMovedFigure().getAlliance());
+    }
+
     @Override
     public String toString(){
         return FigureType.KING.toString();

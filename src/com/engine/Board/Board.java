@@ -6,6 +6,7 @@ import com.engine.Player.BlackPlayer;
 import com.engine.Player.Player;
 import com.engine.Player.WhitePlayer;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Iterables;
 
 import java.util.*;
 
@@ -21,7 +22,7 @@ public class Board {
 
     private final Player currentPlayer;
 
-    private Board(Builder builder){
+    private Board(final Builder builder){
         this.gameBoard = createGameBoard(builder);
         this.whiteFigures = calculateActiveFigures(this.gameBoard, Alliance.white);
         this.blackFigures = calculateActiveFigures(this.gameBoard, Alliance.black);
@@ -29,7 +30,7 @@ public class Board {
         final Collection<Move>blackLegalMoves = calculateLegalMoves(this.blackFigures);
         this.whitePlayer = new WhitePlayer(this, whiteLegalMoves, blackLegalMoves);
         this.blackPlayer = new BlackPlayer(this, whiteLegalMoves, blackLegalMoves);
-        this.currentPlayer=null;
+        this.currentPlayer=builder.nextMove.choosePlayer(this.whitePlayer, this.blackPlayer);
     }
     public Player whitePlayer(){
         return this.whitePlayer;
@@ -139,9 +140,16 @@ public class Board {
         return builder.build();
     }
 
+    public Iterable<Move> getAllLegalMoves() {
+        return Iterables.unmodifiableIterable(Iterables.concat(this.whitePlayer.getPlayerMoves(),
+                this.blackPlayer.getPlayerMoves()));
+    }
+
+
     public static class Builder{
         Map<Integer, Figure> boardConfig;
         Alliance nextMove;
+        Pawn enPassantPawn;
         public Builder(){
             this.boardConfig = new HashMap<>();
         }
@@ -157,6 +165,10 @@ public class Board {
 
         public Board build(){
             return new Board(this);
+        }
+
+        public void setEnPassantPawn(Pawn enPassantPawn) {
+            this.enPassantPawn = enPassantPawn;
         }
     }
 }

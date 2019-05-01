@@ -16,7 +16,10 @@ public class Queen extends Figure {
     public Queen(int position, Alliance alliance) {
         super(position, alliance, FigureType.QUEEN);
     }
-
+    @Override
+    public Queen moveFigure(Move move) {
+        return new Queen(move.getDestinationCoordinate(), move.getMovedFigure().getAlliance());
+    }
     @Override
     public Collection<Move> calculatePossibleMoves(Board board) {
         final List<Move> possibleMoves = new ArrayList<>();

@@ -18,6 +18,11 @@ public class Bishop extends Figure {
     }
 
     @Override
+    public Bishop moveFigure(Move move) {
+        return new Bishop(move.getDestinationCoordinate(), move.getMovedFigure().getAlliance());
+    }
+
+    @Override
     public Collection<Move> calculatePossibleMoves(Board board) {
         final List<Move> possibleMoves = new ArrayList<>();
         int temp;
