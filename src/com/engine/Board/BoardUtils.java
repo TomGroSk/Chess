@@ -6,8 +6,16 @@ public class BoardUtils {
     public static boolean[] seventhColumn = initColumn(6);
     public static boolean[] eighthColumn = initColumn(7);
 
-    public static boolean[] secondRow = null;
-    public static boolean[] seventhRow = null;
+    public static boolean[] secondRow = initRow(8);
+    public static boolean[] seventhRow = initRow(48);
+
+    private static boolean[] initRow(int i) {
+        final boolean[] row = new boolean[numFields];
+        for(int j=0;j<numFieldsPerRow;j++){
+            row[i+j]=true;
+        }
+        return row;
+    }
 
     public final static int numFields = 64;
     public final static int numFieldsPerRow = 8;
@@ -23,7 +31,7 @@ public class BoardUtils {
     }
 
     private static boolean[] initColumn(int columnNumber) {
-        final boolean[] column = new boolean[64];
+        final boolean[] column = new boolean[numFields];
         do{
             column[columnNumber]=true;
             columnNumber+=8;

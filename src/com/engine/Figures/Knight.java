@@ -14,7 +14,7 @@ import java.util.List;
 public class Knight extends Figure {
     private static int [] possiblyMoveTable = {-17,-15,-10,-6,6,10,15,17};
 
-    Knight(final int position, final Alliance alliance) {
+    public Knight(final int position, final Alliance alliance) {
         super(position, alliance);
     }
 
@@ -61,5 +61,9 @@ public class Knight extends Figure {
     private static boolean isAtEighthColumn(final int currentPosition, final int candidateMove){
         return BoardUtils.eighthColumn[currentPosition] && ((candidateMove==-15) || (candidateMove==-6) ||
                 (candidateMove==10) ||(candidateMove==17));
+    }
+    @Override
+    public String toString(){
+        return FigureType.KNIGHT.toString();
     }
 }

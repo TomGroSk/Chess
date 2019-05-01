@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Queen extends Figure {
     private final static int [] possiblyMoveTable = {-9, -8, -7, -1, 1, 7, 8, 9};
-    Queen(int position, Alliance alliance) {
+    public Queen(int position, Alliance alliance) {
         super(position, alliance);
     }
 
@@ -55,5 +55,9 @@ public class Queen extends Figure {
     private static boolean isAtEighthColumn(final int currentPosition, final int candidateMove){
         return BoardUtils.eighthColumn[currentPosition] && ((candidateMove == -7) || (candidateMove == 1) ||
                 (candidateMove == 9));
+    }
+    @Override
+    public String toString(){
+        return FigureType.QUEEN.toString();
     }
 }

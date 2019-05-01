@@ -26,6 +26,24 @@ public abstract class Figure {
         return this.position;
     }
 
+    public enum FigureType{
+        PAWN("P"),
+        KNIGHT("N"),
+        BISHOP("B"),
+        ROOK("R"),
+        QUEEN("Q"),
+        KING("K");
+
+        private String figureName;
+        FigureType(String figureName){
+            this.figureName = figureName;
+        }
+        @Override
+        public String toString(){
+            return this.figureName;
+        }
+    }
+
     public abstract Collection<Move> calculatePossibleMoves(final Board board);
 }
 

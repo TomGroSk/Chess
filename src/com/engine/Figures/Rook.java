@@ -14,7 +14,7 @@ import java.util.List;
 public class Rook extends Figure {
 
     private final static int [] possiblyMoveTable = {-8, -1, 1, 8};
-    Rook(int position, Alliance alliance) {
+    public Rook(int position, Alliance alliance) {
         super(position, alliance);
     }
 
@@ -54,5 +54,9 @@ public class Rook extends Figure {
     }
     private static boolean isAtEighthColumn(final int currentPosition, final int candidateMove){
         return BoardUtils.eighthColumn[currentPosition] && (candidateMove == 1);
+    }
+    @Override
+    public String toString(){
+        return FigureType.ROOK.toString();
     }
 }

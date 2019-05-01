@@ -40,6 +40,10 @@ public abstract class Field {
             super(coordinate);
         }
         @Override
+        public String toString(){
+            return "-";
+        }
+        @Override
         public boolean isEmpty(){
             return true;
         }
@@ -55,6 +59,10 @@ public abstract class Field {
         private OccupiedField(int coordinate, Figure figure){
             super(coordinate);
             this.figure = figure;
+        }
+        @Override
+        public String toString(){
+            return getFigure().getAlliance().isBlack() ? getFigure().toString().toLowerCase() : getFigure().toString();
         }
         @Override
         public boolean isEmpty(){

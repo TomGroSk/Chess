@@ -14,7 +14,7 @@ public class Pawn extends Figure{
 
     private final static int [] possiblyMoveTable = {7, 8, 9, 16};
 
-    Pawn(int position, Alliance alliance) {
+    public Pawn(int position, Alliance alliance) {
         super(position, alliance);
     }
 
@@ -59,5 +59,9 @@ public class Pawn extends Figure{
             }
         }
         return ImmutableList.copyOf(possibleMoves);
+    }
+    @Override
+    public String toString(){
+        return FigureType.PAWN.toString();
     }
 }

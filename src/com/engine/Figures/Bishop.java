@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Bishop extends Figure {
     private final static int [] possiblyMoveTable = {-9, -7, 7, 9};
-    Bishop(int position, Alliance alliance) {
+    public Bishop(int position, Alliance alliance) {
         super(position, alliance);
     }
 
@@ -47,6 +47,10 @@ public class Bishop extends Figure {
             }
         }
         return ImmutableList.copyOf(possibleMoves);
+    }
+    @Override
+    public String toString(){
+        return FigureType.BISHOP.toString();
     }
     private static boolean isAtFirstColumn(final int currentPosition, final int candidateMove){
         return BoardUtils.firstColumn[currentPosition] && ((candidateMove == -9) || (candidateMove == 7));

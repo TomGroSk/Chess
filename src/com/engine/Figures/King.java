@@ -17,7 +17,7 @@ public class King extends Figure {
 
     private final static int [] possiblyMoveTable = {-9, -8, -7, -1, 1, 7, 8, 9};
 
-    King(int position, Alliance alliance) {
+    public King(int position, Alliance alliance) {
         super(position, alliance);
     }
 
@@ -48,7 +48,10 @@ public class King extends Figure {
         }
         return ImmutableList.copyOf(possibleMoves);
     }
-
+    @Override
+    public String toString(){
+        return FigureType.KING.toString();
+    }
     private static boolean isAtFirstColumn(final int currentPosition, final int candidateMove){
         return BoardUtils.firstColumn[currentPosition] && ((candidateMove==-9) || (candidateMove==-1) ||
                 (candidateMove==7));
