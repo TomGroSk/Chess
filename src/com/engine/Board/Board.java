@@ -2,6 +2,9 @@ package com.engine.Board;
 
 import com.engine.Alliance;
 import com.engine.Figures.*;
+import com.engine.Player.BlackPlayer;
+import com.engine.Player.Player;
+import com.engine.Player.WhitePlayer;
 import com.google.common.collect.ImmutableList;
 
 import java.util.*;
@@ -9,18 +12,34 @@ import java.util.*;
 public class Board {
 
     private final List<Field> gameBoard;
+
     private final Collection<Figure> whiteFigures;
     private final Collection<Figure> blackFigures;
+
+    private final WhitePlayer whitePlayer;
+    private final BlackPlayer blackPlayer;
+
+    private final Player currentPlayer;
 
     private Board(Builder builder){
         this.gameBoard = createGameBoard(builder);
         this.whiteFigures = calculateActiveFigures(this.gameBoard, Alliance.white);
         this.blackFigures = calculateActiveFigures(this.gameBoard, Alliance.black);
-
         final Collection<Move>whiteLegalMoves = calculateLegalMoves(this.whiteFigures);
         final Collection<Move>blackLegalMoves = calculateLegalMoves(this.blackFigures);
+        this.whitePlayer = new WhitePlayer(this, whiteLegalMoves, blackLegalMoves);
+        this.blackPlayer = new BlackPlayer(this, whiteLegalMoves, blackLegalMoves);
+        this.currentPlayer=null;
     }
-
+    public Player whitePlayer(){
+        return this.whitePlayer;
+    }
+    public Player blackPlayer(){
+        return this.blackPlayer;
+    }
+    public Player currentPlayer(){
+        return this.currentPlayer;
+    }
     private Collection<Move> calculateLegalMoves(final Collection<Figure> figures) {
         final List<Move> legalMoves = new ArrayList<>();
         for(final Figure figure: figures){
@@ -28,7 +47,12 @@ public class Board {
         }
         return ImmutableList.copyOf(legalMoves);
     }
-
+    public Collection<Figure>getBlackFigures(){
+        return this.blackFigures;
+    }
+    public Collection<Figure>getWhiteFigures(){
+        return this.whiteFigures;
+    }
     @Override
     public String toString(){
         final StringBuilder stringBuilder = new StringBuilder();

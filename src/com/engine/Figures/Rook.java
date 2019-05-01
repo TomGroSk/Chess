@@ -15,7 +15,7 @@ public class Rook extends Figure {
 
     private final static int [] possiblyMoveTable = {-8, -1, 1, 8};
     public Rook(int position, Alliance alliance) {
-        super(position, alliance);
+        super(position, alliance, FigureType.ROOK);
     }
 
     @Override

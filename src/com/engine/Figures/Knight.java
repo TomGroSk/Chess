@@ -15,7 +15,7 @@ public class Knight extends Figure {
     private static int [] possiblyMoveTable = {-17,-15,-10,-6,6,10,15,17};
 
     public Knight(final int position, final Alliance alliance) {
-        super(position, alliance);
+        super(position, alliance, FigureType.KNIGHT);
     }
 
     @Override

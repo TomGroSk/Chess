@@ -13,9 +13,18 @@ public abstract class Move {
         this.movedFigure = movedFigure;
     }
 
+    public int getDestinationCoordinate() {
+        return this.destinationCoordinate;
+    }
+
+    public abstract Board execute();
+
     public static class MajorMove extends Move{
         public MajorMove(final Board board, final Figure movedFigure, final int destinationCoordinate) {
             super(board, movedFigure, destinationCoordinate);
+        }
+        public Board execute(){
+            return null;
         }
     }
     
@@ -24,6 +33,9 @@ public abstract class Move {
         public AttackMove(final Board board, final Figure movedFigure, final Figure attackedFigure, final int destinationCoordinate) {
             super(board, movedFigure, destinationCoordinate);
             this.attackedFigure = attackedFigure;
+        }
+        public Board execute(){
+            return null;
         }
     }
 }

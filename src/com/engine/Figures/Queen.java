@@ -14,7 +14,7 @@ import java.util.List;
 public class Queen extends Figure {
     private final static int [] possiblyMoveTable = {-9, -8, -7, -1, 1, 7, 8, 9};
     public Queen(int position, Alliance alliance) {
-        super(position, alliance);
+        super(position, alliance, FigureType.QUEEN);
     }
 
     @Override

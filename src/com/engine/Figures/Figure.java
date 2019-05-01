@@ -10,12 +10,19 @@ public abstract class Figure {
     protected final int position;
     protected final Alliance alliance;
     protected final boolean isFirstMove;
+    protected final FigureType figureType;
 
-    Figure(final int position, final Alliance alliance){
+    Figure(final int position, final Alliance alliance, final FigureType figureType){
         this.position = position;
         this.alliance = alliance;
         this.isFirstMove = false;
+        this.figureType = figureType;
     }
+
+    public FigureType getFigureType() {
+        return this.figureType;
+    }
+
     public Alliance getAlliance(){
         return this.alliance;
     }
@@ -27,12 +34,36 @@ public abstract class Figure {
     }
 
     public enum FigureType{
-        PAWN("P"),
-        KNIGHT("N"),
-        BISHOP("B"),
-        ROOK("R"),
-        QUEEN("Q"),
-        KING("K");
+        PAWN("P"){
+            public boolean isKing(){
+                return false;
+            }
+        },
+        KNIGHT("N"){
+            public boolean isKing(){
+                return false;
+            }
+        },
+        BISHOP("B"){
+            public boolean isKing(){
+                return false;
+            }
+        },
+        ROOK("R"){
+            public boolean isKing(){
+                return false;
+            }
+        },
+        QUEEN("Q"){
+            public boolean isKing(){
+                return false;
+            }
+        },
+        KING("K"){
+            public boolean isKing(){
+                return true;
+            }
+        };
 
         private String figureName;
         FigureType(String figureName){
@@ -42,6 +73,7 @@ public abstract class Figure {
         public String toString(){
             return this.figureName;
         }
+        public abstract boolean isKing();
     }
 
     public abstract Collection<Move> calculatePossibleMoves(final Board board);

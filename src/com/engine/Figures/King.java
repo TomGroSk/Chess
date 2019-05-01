@@ -18,7 +18,7 @@ public class King extends Figure {
     private final static int [] possiblyMoveTable = {-9, -8, -7, -1, 1, 7, 8, 9};
 
     public King(int position, Alliance alliance) {
-        super(position, alliance);
+        super(position, alliance, FigureType.KING);
     }
 
     @Override

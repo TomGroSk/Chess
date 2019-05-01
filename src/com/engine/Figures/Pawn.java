@@ -15,7 +15,7 @@ public class Pawn extends Figure{
     private final static int [] possiblyMoveTable = {7, 8, 9, 16};
 
     public Pawn(int position, Alliance alliance) {
-        super(position, alliance);
+        super(position, alliance, FigureType.PAWN);
     }
 
     @Override
