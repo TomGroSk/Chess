@@ -1,7 +1,7 @@
-package com.engine.Board;
+package com.chess.Engine.Board;
 
 
-import com.engine.Figures.Figure;
+import com.chess.Engine.Figures.Figure;
 import com.google.common.collect.ImmutableMap;
 
 import java.util.HashMap;

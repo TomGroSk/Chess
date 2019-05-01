@@ -1,10 +1,9 @@
-package com.engine.Figures;
+package com.chess.Engine.Figures;
 
-import com.engine.Alliance;
-import com.engine.Board.Board;
-import com.engine.Board.Move;
+import com.chess.Engine.Alliance;
+import com.chess.Engine.Board.Board;
+import com.chess.Engine.Board.Move;
 
-import java.nio.channels.Pipe;
 import java.util.Collection;
 
 public abstract class Figure {

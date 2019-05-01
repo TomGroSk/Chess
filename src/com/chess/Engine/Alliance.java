@@ -1,8 +1,8 @@
-package com.engine;
+package com.chess.Engine;
 
-import com.engine.Player.BlackPlayer;
-import com.engine.Player.Player;
-import com.engine.Player.WhitePlayer;
+import com.chess.Engine.Player.BlackPlayer;
+import com.chess.Engine.Player.Player;
+import com.chess.Engine.Player.WhitePlayer;
 
 public enum Alliance {
     white{

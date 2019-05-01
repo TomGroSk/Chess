@@ -1,9 +1,9 @@
-package com.engine.Figures;
+package com.chess.Engine.Figures;
 
-import com.engine.Alliance;
-import com.engine.Board.Board;
-import com.engine.Board.BoardUtils;
-import com.engine.Board.Move;
+import com.chess.Engine.Alliance;
+import com.chess.Engine.Board.Board;
+import com.chess.Engine.Board.BoardUtils;
+import com.chess.Engine.Board.Move;
 import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;

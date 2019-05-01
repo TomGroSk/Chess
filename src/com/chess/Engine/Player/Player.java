@@ -1,13 +1,11 @@
-package com.engine.Player;
+package com.chess.Engine.Player;
 
-import com.engine.Alliance;
-import com.engine.Board.Board;
-import com.engine.Board.Field;
-import com.engine.Board.Move;
-import com.engine.Figures.Figure;
-import com.engine.Figures.King;
+import com.chess.Engine.Alliance;
+import com.chess.Engine.Figures.Figure;
+import com.chess.Engine.Figures.King;
+import com.chess.Engine.Board.Board;
+import com.chess.Engine.Board.Move;
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Iterables;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -17,13 +15,16 @@ public abstract class Player {
     private final boolean isInCheck;
     protected final Board board;
     protected final King playerKing;
-    protected final Collection<Move> playerMoves;
+    protected final Collection<Move> playerLegals;
 
-    Player(final Board board, final Collection<Move> playerMoves, final Collection<Move> opponentMoves){
+    Player(final Board board,
+           final Collection<Move> playerLegals,
+           final Collection<Move> opponentLegals) {
+
         this.board = board;
-        this.playerMoves = ImmutableList.copyOf(Iterables.concat(playerMoves, calculateKingCastles(playerMoves, opponentMoves)));
         this.playerKing = establishKing();
-        this.isInCheck=!Player.calculateAttackOnField(this.playerKing.getPosition(), opponentMoves).isEmpty();
+        this.isInCheck = Player.calculateAttackOnField(this.playerKing.getPosition(), opponentLegals).isEmpty();
+        this.playerLegals = ImmutableList.copyOf(playerLegals);
     }
 
 
@@ -42,7 +43,7 @@ public abstract class Player {
     }
 
     public Collection<Move> getPlayerMoves() {
-        return this.playerMoves;
+        return this.playerLegals;
     }
 
     private King establishKing() {
@@ -55,7 +56,7 @@ public abstract class Player {
     }
 
     public boolean isMoveLegal(final Move move){
-        return this.playerMoves.contains(move);
+        return this.playerLegals.contains(move);
     }
     public boolean isInCheck(){
         return this.isInCheck;
@@ -88,7 +89,7 @@ public abstract class Player {
     }
 
     protected boolean canEscape() {
-        for(final Move move: this.playerMoves){
+        for(final Move move: this.playerLegals){
             final MoveTransition transition = makeMove(move);
             if(transition.getMoveStatus().isDone()){
                 return true;

@@ -1,9 +1,8 @@
-package com.engine.Board;
+package com.chess.Engine.Board;
 
-import com.engine.Board.Board.Builder;
-import com.engine.Figures.Figure;
-import com.engine.Figures.Pawn;
-import com.engine.Figures.Rook;
+import com.chess.Engine.Figures.Figure;
+import com.chess.Engine.Figures.Pawn;
+import com.chess.Engine.Figures.Rook;
 
 public abstract class Move {
     final int destinationCoordinate;
@@ -60,7 +59,7 @@ public abstract class Move {
     }
 
     public Board execute(){
-        final Builder builder = new Builder();
+        final Board.Builder builder = new Board.Builder();
         for(final Figure figure: this.board.currentPlayer().getActiveFigures()){
             if(!this.movedFigure.equals(figure)){
                 builder.setFigure(figure);
@@ -147,7 +146,7 @@ public abstract class Move {
 
         @Override
         public Board execute(){
-            final Builder builder = new Builder();
+            final Board.Builder builder = new Board.Builder();
             for(final Figure figure: this.board.currentPlayer().getActiveFigures()){
                 if(!this.movedFigure.equals(figure)){
                     builder.setFigure(figure);
@@ -187,7 +186,7 @@ public abstract class Move {
         }
         @Override
         public Board execute(){
-            final Builder builder = new Builder();
+            final Board.Builder builder = new Board.Builder();
             for(final Figure figure: this.board.currentPlayer().getActiveFigures()){
                 if(!this.movedFigure.equals(figure) && !this.castleRook.equals(figure)){
                     builder.setFigure(figure);
