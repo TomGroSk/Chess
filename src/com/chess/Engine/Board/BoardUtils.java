@@ -6,8 +6,14 @@ public class BoardUtils {
     public static boolean[] seventhColumn = initColumn(6);
     public static boolean[] eighthColumn = initColumn(7);
 
+    public static boolean[] firstRow = initRow(0);
     public static boolean[] secondRow = initRow(8);
+    public static boolean[] thirdRow = initRow(16);
+    public static boolean[] fourthRow = initRow(24);
+    public static boolean[] fifthRow = initRow(32);
+    public static boolean[] sixthRow = initRow(40);
     public static boolean[] seventhRow = initRow(48);
+    public static boolean[] eighthRow = initRow(56);
 
     private static boolean[] initRow(int i) {
         final boolean[] row = new boolean[numFields];
