@@ -14,8 +14,11 @@ public class Pawn extends Figure{
 
     private final static int [] possiblyMoveTable = {7, 8, 9, 16};
 
-    public Pawn(int position, Alliance alliance) {
-        super(position, alliance, FigureType.PAWN);
+    public Pawn(final int position, final Alliance alliance) {
+        super(position, alliance,FigureType.PAWN, true);
+    }
+    public Pawn(final int position, final Alliance alliance, final boolean isFirstMove) {
+        super(position, alliance,FigureType.PAWN, isFirstMove);
     }
     @Override
     public Pawn moveFigure(Move move) {
@@ -33,8 +36,8 @@ public class Pawn extends Figure{
                 possibleMoves.add(new Move.MajorMove(board, this, temp));
             }
             else if(currentPossibleMove == 16 && this.isFirstMove() &&
-                    (BoardUtils.secondRow[this.position] && this.getAlliance().isBlack()) ||
-                    (BoardUtils.seventhRow[this.position] && !this.getAlliance().isBlack())){
+                    ((BoardUtils.secondRow[this.position] && this.getAlliance().isBlack()) ||
+                    (BoardUtils.seventhRow[this.position] && !this.getAlliance().isBlack()))){
                 final int behindTemp = this.position+ (this.getAlliance().getDirection() * 8);
                 if(board.getField(behindTemp).isEmpty() && board.getField(temp).isEmpty()){
                     possibleMoves.add(new Move.MajorMove(board, this, temp));

@@ -14,8 +14,11 @@ import java.util.List;
 public class Rook extends Figure {
 
     private final static int [] possiblyMoveTable = {-8, -1, 1, 8};
-    public Rook(int position, Alliance alliance) {
-        super(position, alliance, FigureType.ROOK);
+    public Rook(final int position, final Alliance alliance) {
+        super(position, alliance,FigureType.ROOK, true);
+    }
+    public Rook(final int position, final Alliance alliance, final boolean isFirstMove) {
+        super(position, alliance,FigureType.ROOK, isFirstMove);
     }
     @Override
     public Rook moveFigure(Move move) {

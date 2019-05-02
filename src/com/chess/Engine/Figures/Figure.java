@@ -13,10 +13,10 @@ public abstract class Figure {
     protected final FigureType figureType;
     private final int cacheHash;
 
-    Figure(final int position, final Alliance alliance, final FigureType figureType){
+    Figure(final int position, final Alliance alliance, final FigureType figureType, final boolean isFirstMove){
         this.position = position;
         this.alliance = alliance;
-        this.isFirstMove = false;
+        this.isFirstMove = isFirstMove;
         this.figureType = figureType;
         cacheHash = calculateHashCode();
     }

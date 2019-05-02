@@ -13,8 +13,12 @@ import java.util.List;
 
 public class Queen extends Figure {
     private final static int [] possiblyMoveTable = {-9, -8, -7, -1, 1, 7, 8, 9};
-    public Queen(int position, Alliance alliance) {
-        super(position, alliance, FigureType.QUEEN);
+
+    public Queen(final int position, final Alliance alliance) {
+        super(position, alliance,FigureType.QUEEN, true);
+    }
+    public Queen(final int position, final Alliance alliance, final boolean isFirstMove) {
+        super(position, alliance,FigureType.QUEEN, isFirstMove);
     }
     @Override
     public Queen moveFigure(Move move) {

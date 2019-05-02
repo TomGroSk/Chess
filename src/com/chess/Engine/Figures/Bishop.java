@@ -13,8 +13,11 @@ import java.util.List;
 
 public class Bishop extends Figure {
     private final static int [] possiblyMoveTable = {-9, -7, 7, 9};
-    public Bishop(int position, Alliance alliance) {
-        super(position, alliance,FigureType.BISHOP);
+    public Bishop(final int position, final Alliance alliance) {
+        super(position, alliance,FigureType.BISHOP, true);
+    }
+    public Bishop(final int position, final Alliance alliance, final boolean isFirstMove) {
+        super(position, alliance,FigureType.BISHOP, isFirstMove);
     }
 
     @Override
