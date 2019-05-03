@@ -69,6 +69,9 @@ public abstract class Move {
     public Figure getAttackedFigure(){
         return null;
     }
+    public Board getBoard(){
+        return this.board;
+    };
 
     public Board execute(){
         final Builder builder = new Builder();
@@ -161,6 +164,61 @@ public abstract class Move {
         @Override
         public String toString(){
             return BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
+        }
+    }
+
+    public static class PawnPromotion extends Move{
+
+        final Move decoratedMove;
+        final Pawn promotedPawn;
+
+        public PawnPromotion(final Move decoratedMove) {
+            super(decoratedMove.getBoard(), decoratedMove.getMovedFigure(), decoratedMove.getDestinationCoordinate());
+            this.decoratedMove = decoratedMove;
+            this.promotedPawn = (Pawn) decoratedMove.getMovedFigure();
+        }
+
+        @Override
+        public Board execute(){
+            final Board pawnMovedBoard = this.decoratedMove.execute();
+            final Builder builder = new Builder();
+            for(final Figure figure : pawnMovedBoard.currentPlayer().getActiveFigures()){
+                if(!(this.promotedPawn.equals(figure))){
+                    builder.setFigure(figure);
+                }
+            }
+            for(final Figure figure : pawnMovedBoard.currentPlayer().getOpponent().getActiveFigures()){
+                    builder.setFigure(figure);
+            }
+            builder.setFigure(this.promotedPawn.getPromotionFigure().moveFigure(this));
+            builder.setNextMoveMaker(pawnMovedBoard.currentPlayer().getAlliance());
+
+            return builder.build();
+        }
+
+        @Override
+        public boolean isAttack() {
+            return this.decoratedMove.isAttack();
+        }
+
+        @Override
+        public Figure getAttackedFigure() {
+            return this.decoratedMove.getAttackedFigure();
+        }
+
+        @Override
+        public int hashCode() {
+            return decoratedMove.hashCode() + (31 * promotedPawn.hashCode());
+        }
+
+        @Override
+        public boolean equals(final Object other) {
+            return this == other || other instanceof PawnPromotion && (super.equals(other));
+        }
+
+        @Override
+        public String toString() {
+            return "";
         }
     }
 

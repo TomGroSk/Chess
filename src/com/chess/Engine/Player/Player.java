@@ -23,7 +23,7 @@ public abstract class Player {
 
         this.board = board;
         this.playerKing = establishKing();
-        this.isInCheck = Player.calculateAttackOnField(this.playerKing.getPosition(), opponentLegals).isEmpty();
+        this.isInCheck = !Player.calculateAttackOnField(this.playerKing.getPosition(), opponentLegals).isEmpty();
         this.playerLegals = ImmutableList.copyOf(playerLegals);
     }
 
