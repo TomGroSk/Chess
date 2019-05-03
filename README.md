@@ -1,3 +1,3 @@
 # Chess
 
-Unfinished chess in java
+Chess in java
