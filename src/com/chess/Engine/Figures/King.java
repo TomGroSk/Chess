@@ -27,7 +27,7 @@ public class King extends Figure {
     public Collection<Move> calculatePossibleMoves(Board board) {
         final List<Move> possibleMoves = new ArrayList<>();
 
-        for(final int currentPossibleMove:possiblyMoveTable){
+        for(final int currentPossibleMove: possiblyMoveTable){
             final int temp = this.position+currentPossibleMove;
 
             if(isAtFirstColumn(this.position, currentPossibleMove) ||

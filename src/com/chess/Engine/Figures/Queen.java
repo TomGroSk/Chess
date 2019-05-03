@@ -32,9 +32,8 @@ public class Queen extends Figure {
         for(final int currentPossibleMove:possiblyMoveTable){
             temp = this.position;
             while (BoardUtils.isValidCoordinate(temp)){
-                if(isAtFirstColumn(this.position, currentPossibleMove) ||
-                        isAtEighthColumn(this.position, currentPossibleMove)){
-
+                if(isAtFirstColumn(temp, currentPossibleMove) ||
+                        isAtEighthColumn(temp, currentPossibleMove)){
                     break;
                 }
                 temp +=currentPossibleMove;

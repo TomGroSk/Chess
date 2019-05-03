@@ -28,13 +28,12 @@ public class Rook extends Figure {
     @Override
     public Collection<Move> calculatePossibleMoves(Board board) {
         final List<Move> possibleMoves = new ArrayList<>();
-        int temp;
+        int temp ;
         for(final int currentPossibleMove:possiblyMoveTable){
             temp = this.position;
             while (BoardUtils.isValidCoordinate(temp)){
-                if(isAtFirstColumn(this.position, currentPossibleMove) ||
-                        isAtEighthColumn(this.position, currentPossibleMove)){
-
+                if(isAtFirstColumn(temp, currentPossibleMove) ||
+                        isAtEighthColumn(temp, currentPossibleMove)){
                     break;
                 }
                 temp +=currentPossibleMove;
