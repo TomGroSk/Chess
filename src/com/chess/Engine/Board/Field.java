@@ -10,9 +10,15 @@ import java.util.Map;
 public abstract class Field {
     protected final int coordinate;
     private static final Map<Integer, EmptyField> EMPTY_FIELDS = createAllEmptyFields();
+
+    private Field(final int coordinate){
+        this.coordinate = coordinate;
+    }
+
     public int getFieldCoordinate(){
         return this.coordinate;
     }
+
     private static Map<Integer, EmptyField> createAllEmptyFields() {
         final Map<Integer, EmptyField> emptyFieldMap = new HashMap<>();
 
@@ -20,10 +26,6 @@ public abstract class Field {
             emptyFieldMap.put(i, new EmptyField(i));
         }
         return ImmutableMap.copyOf(emptyFieldMap);
-    }
-
-    private Field(final int coordinate){
-        this.coordinate = coordinate;
     }
 
     public static Field createField(final int coordinate, Figure figure){

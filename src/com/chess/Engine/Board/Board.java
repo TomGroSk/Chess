@@ -39,20 +39,24 @@ public class Board {
         this.blackPlayer = new BlackPlayer(this, whiteLegalMoves, blackLegalMoves);
 
         this.currentPlayer=builder.nextMove.choosePlayer(this.whitePlayer, this.blackPlayer);
-
     }
+
     public Pawn getEnPassantPawn(){
         return this.enPassantPawn;
     }
+
     public Player whitePlayer(){
         return this.whitePlayer;
     }
+
     public Player blackPlayer(){
         return this.blackPlayer;
     }
+
     public Player currentPlayer(){
         return this.currentPlayer;
     }
+
     private Collection<Move> calculateLegalMoves(final Collection<Figure> figures) {
         final List<Move> legalMoves = new ArrayList<>();
         for(final Figure figure: figures){
@@ -60,12 +64,15 @@ public class Board {
         }
         return ImmutableList.copyOf(legalMoves);
     }
+
     public Collection<Figure>getBlackFigures(){
         return this.blackFigures;
     }
+
     public Collection<Figure>getWhiteFigures(){
         return this.whiteFigures;
     }
+
     @Override
     public String toString(){
         final StringBuilder stringBuilder = new StringBuilder();
@@ -112,7 +119,7 @@ public class Board {
     }
     public static Board createStandardBoard(){
         Builder builder=new Builder();
-        //WHITE
+
         builder.setFigure(new Rook(0, Alliance.black));
         builder.setFigure(new Knight(1, Alliance.black));
         builder.setFigure(new Bishop(2, Alliance.black));
@@ -129,7 +136,7 @@ public class Board {
         builder.setFigure(new Pawn(13, Alliance.black));
         builder.setFigure(new Pawn(14, Alliance.black));
         builder.setFigure(new Pawn(15, Alliance.black));
-        //BLACK
+
         builder.setFigure(new Pawn(48, Alliance.white));
         builder.setFigure(new Pawn(49, Alliance.white));
         builder.setFigure(new Pawn(50, Alliance.white));

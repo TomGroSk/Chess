@@ -375,10 +375,10 @@ public abstract class Move {
             return this == other || other instanceof KingCastleMove && super.equals(other);
         }
 
-        @Override
-        public String toString(){
-            return "O-O";
-        }
+//        @Override
+//        public String toString(){
+//            return "O-O";
+//        }
     }
 
     public static class QueenCastleMove extends CastleMove{
@@ -396,10 +396,10 @@ public abstract class Move {
             return this == other || other instanceof QueenCastleMove && super.equals(other);
         }
 
-        @Override
-        public String toString(){
-            return "O-O-O";
-        }
+//        @Override
+//        public String toString(){
+//            return "O-O-O";
+//        }
     }
 
     public static class NullMove extends Move{

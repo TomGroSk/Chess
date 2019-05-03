@@ -29,25 +29,25 @@ public class Bishop extends Figure {
     @Override
     public Collection<Move> calculatePossibleMoves(Board board) {
         final List<Move> possibleMoves = new ArrayList<>();
-        int candidateDestinationCoordinate;
+        int temp;
         for(final int currentPossibleMove:possiblyMoveTable){
-            candidateDestinationCoordinate = this.position;
-            while (BoardUtils.isValidCoordinate(candidateDestinationCoordinate)){
-                if(isAtFirstColumn(candidateDestinationCoordinate, currentPossibleMove) ||
-                        isAtEighthColumn(candidateDestinationCoordinate, currentPossibleMove)){
+            temp = this.position;
+            while (BoardUtils.isValidCoordinate(temp)){
+                if(isAtFirstColumn(temp, currentPossibleMove) ||
+                        isAtEighthColumn(temp, currentPossibleMove)){
                     break;
                 }
-                candidateDestinationCoordinate += currentPossibleMove;
-                if(BoardUtils.isValidCoordinate(candidateDestinationCoordinate)){
-                    final Field possiblyDestinationField = board.getField(candidateDestinationCoordinate);
+                temp += currentPossibleMove;
+                if(BoardUtils.isValidCoordinate(temp)){
+                    final Field possiblyDestinationField = board.getField(temp);
                     if(possiblyDestinationField.isEmpty()){
-                        possibleMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
+                        possibleMoves.add(new MajorMove(board, this, temp));
                     }
                     else{
                         final Figure figureAtDestination = possiblyDestinationField.getFigure();
                         final Alliance figureAlliance = figureAtDestination.getAlliance();
                         if(this.alliance != figureAlliance){
-                            possibleMoves.add(new MajorAttackMove(board, this, figureAtDestination, candidateDestinationCoordinate));
+                            possibleMoves.add(new MajorAttackMove(board, this, figureAtDestination, temp));
                         }
                         break;
                     }
