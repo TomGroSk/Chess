@@ -50,7 +50,7 @@ public class Table {
         final JMenuBar tableMenuBar = populateMenuBar();
         this.gameFrame.setJMenuBar(tableMenuBar);
         this.boardPanel = new BoardPanel();
-        this.highlightLegalMoves = false;
+        this.highlightLegalMoves = true;
         this.boardDirection = BoardDirection.NORMAL;
         this.gameFrame.add(this.boardPanel, BorderLayout.CENTER);
         this.gameFrame.setSize(OUTER_FRAME_DIMENSION);
@@ -80,7 +80,7 @@ public class Table {
         preferencesMenu.add(flipBoardMenuItem);
 
         preferencesMenu.addSeparator();
-        final JCheckBoxMenuItem legalMoveHighlightsCheckBox = new JCheckBoxMenuItem("Highlight Legal Moves", false);
+        final JCheckBoxMenuItem legalMoveHighlightsCheckBox = new JCheckBoxMenuItem("Highlight Legal Moves", true);
         legalMoveHighlightsCheckBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

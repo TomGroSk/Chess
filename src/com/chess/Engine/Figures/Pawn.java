@@ -4,6 +4,7 @@ import com.chess.Engine.Alliance;
 import com.chess.Engine.Board.Board;
 import com.chess.Engine.Board.BoardUtils;
 import com.chess.Engine.Board.Move;
+import com.chess.Engine.Board.Move.*;
 import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;
@@ -33,23 +34,31 @@ public class Pawn extends Figure{
                 continue;
             }
             if(currentPossibleMove == 8 && board.getField(temp).isEmpty()){
-                possibleMoves.add(new Move.MajorMove(board, this, temp));
+                possibleMoves.add(new PawnMove(board, this, temp));
             }
             else if(currentPossibleMove == 16 && this.isFirstMove() &&
                     ((BoardUtils.secondRow[this.position] && this.getAlliance().isBlack()) ||
                     (BoardUtils.seventhRow[this.position] && !this.getAlliance().isBlack()))){
-                final int behindTemp = this.position+ (this.getAlliance().getDirection() * 8);
+                final int behindTemp = this.position + (this.getAlliance().getDirection() * 8);
                 if(board.getField(behindTemp).isEmpty() && board.getField(temp).isEmpty()){
-                    possibleMoves.add(new Move.MajorMove(board, this, temp));
+                    possibleMoves.add(new PawnJump(board, this, temp));
                 }
             }
             else if(currentPossibleMove == 7 &&
                     !((BoardUtils.eighthColumn[this.position] && !this.alliance.isBlack()) ||
                     (BoardUtils.firstColumn[this.position] && this.alliance.isBlack()))){
                 if(!board.getField(temp).isEmpty()){
-                    Figure figure = board.getField(temp).getFigure();
-                    if(this.alliance != figure.alliance){
-                        possibleMoves.add(new Move.MajorMove(board, this, temp));
+                    Figure figureOnCandidate = board.getField(temp).getFigure();
+                    if(this.alliance != figureOnCandidate.alliance){
+                        possibleMoves.add(new PawnAttackMove(board, this, figureOnCandidate , temp));
+                    }
+                }
+                else if(board.getEnPassantPawn() != null){
+                    if(board.getEnPassantPawn().getPosition() == (this.position + (this.alliance.getOppositeDirection()))){
+                        final Figure figureOnCandidate = board.getEnPassantPawn();
+                        if(this.alliance != figureOnCandidate.alliance){
+                            possibleMoves.add(new PawnEnPassantAttackMove(board, this, figureOnCandidate, temp));
+                        }
                     }
                 }
             }
@@ -59,7 +68,15 @@ public class Pawn extends Figure{
                 if(!board.getField(temp).isEmpty()){
                     Figure figure = board.getField(temp).getFigure();
                     if(this.alliance != figure.alliance){
-                        possibleMoves.add(new Move.MajorMove(board, this, temp));
+                        possibleMoves.add(new PawnAttackMove(board, this, figure , temp));
+                    }
+                }
+                else if(board.getEnPassantPawn() != null){
+                    if(board.getEnPassantPawn().getPosition() == (this.position - (this.alliance.getOppositeDirection()))){
+                        final Figure figureOnCandidate = board.getEnPassantPawn();
+                        if(this.alliance != figureOnCandidate.alliance){
+                            possibleMoves.add(new PawnEnPassantAttackMove(board, this, figureOnCandidate, temp));
+                        }
                     }
                 }
             }

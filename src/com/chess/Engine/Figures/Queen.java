@@ -5,6 +5,7 @@ import com.chess.Engine.Alliance;
 import com.chess.Engine.Board.Board;
 import com.chess.Engine.Board.BoardUtils;
 import com.chess.Engine.Board.Move;
+import com.chess.Engine.Board.Move.*;
 import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;
@@ -40,13 +41,13 @@ public class Queen extends Figure {
                 if(BoardUtils.isValidCoordinate(temp)){
                     final Field possiblyDestinationField = board.getField(temp);
                     if(possiblyDestinationField.isEmpty()){
-                        possibleMoves.add(new Move.MajorMove(board, this, temp));
+                        possibleMoves.add(new MajorMove(board, this, temp));
                     }
                     else{
                         final Figure figureAtDestination = possiblyDestinationField.getFigure();
                         final Alliance figureAlliance = figureAtDestination.getAlliance();
                         if(this.alliance != figureAlliance){
-                            possibleMoves.add(new Move.AttackMove(board, this, figureAtDestination, temp));
+                            possibleMoves.add(new MajorAttackMove(board, this, figureAtDestination, temp));
                         }
                         break;
                     }

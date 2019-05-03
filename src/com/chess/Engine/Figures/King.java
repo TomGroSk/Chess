@@ -5,8 +5,7 @@ import com.chess.Engine.Board.Board;
 import com.chess.Engine.Board.BoardUtils;
 import com.chess.Engine.Board.Field;
 import com.chess.Engine.Board.Move;
-import com.chess.Engine.Board.Move.AttackMove;
-import com.chess.Engine.Board.Move.MajorMove;
+import com.chess.Engine.Board.Move.*;
 import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;
@@ -44,7 +43,7 @@ public class King extends Figure {
                     final Figure figureAtDestination = possiblyDestinationField.getFigure();
                     final Alliance figureAlliance = figureAtDestination.getAlliance();
                     if(this.alliance != figureAlliance){
-                        possibleMoves.add(new AttackMove(board, this, figureAtDestination, temp));
+                        possibleMoves.add(new MajorAttackMove(board, this, figureAtDestination, temp));
                     }
                 }
             }

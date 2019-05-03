@@ -22,15 +22,27 @@ public class Board {
 
     private final Player currentPlayer;
 
+    private  final Pawn enPassantPawn;
+
     private Board(final Builder builder){
         this.gameBoard = createGameBoard(builder);
+
+        this.enPassantPawn = builder.enPassantPawn;
+
         this.whiteFigures = calculateActiveFigures(this.gameBoard, Alliance.white);
         this.blackFigures = calculateActiveFigures(this.gameBoard, Alliance.black);
+
         final Collection<Move>whiteLegalMoves = calculateLegalMoves(this.whiteFigures);
         final Collection<Move>blackLegalMoves = calculateLegalMoves(this.blackFigures);
+
         this.whitePlayer = new WhitePlayer(this, whiteLegalMoves, blackLegalMoves);
         this.blackPlayer = new BlackPlayer(this, whiteLegalMoves, blackLegalMoves);
+
         this.currentPlayer=builder.nextMove.choosePlayer(this.whitePlayer, this.blackPlayer);
+
+    }
+    public Pawn getEnPassantPawn(){
+        return this.enPassantPawn;
     }
     public Player whitePlayer(){
         return this.whitePlayer;
@@ -129,8 +141,8 @@ public class Board {
         builder.setFigure(new Rook(56, Alliance.white));
         builder.setFigure(new Knight(57, Alliance.white));
         builder.setFigure(new Bishop(58, Alliance.white));
-        builder.setFigure(new King(59, Alliance.white));
-        builder.setFigure(new Queen(60, Alliance.white));
+        builder.setFigure(new Queen(59, Alliance.white));
+        builder.setFigure(new King(60, Alliance.white));
         builder.setFigure(new Bishop(61, Alliance.white));
         builder.setFigure(new Knight(62, Alliance.white));
         builder.setFigure(new Rook(63, Alliance.white));

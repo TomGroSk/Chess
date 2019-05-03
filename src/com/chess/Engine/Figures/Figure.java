@@ -59,7 +59,7 @@ public abstract class Figure {
     }
 
     public enum FigureType{
-        PAWN("P"){
+        PAWN("P",100){
             public boolean isKing(){
                 return false;
             }
@@ -67,7 +67,7 @@ public abstract class Figure {
                 return false;
             }
         },
-        KNIGHT("N"){
+        KNIGHT("N",300){
             public boolean isKing(){
                 return false;
             }
@@ -75,7 +75,7 @@ public abstract class Figure {
                 return false;
             }
         },
-        BISHOP("B"){
+        BISHOP("B",300){
             public boolean isKing(){
                 return false;
             }
@@ -83,7 +83,7 @@ public abstract class Figure {
                 return false;
             }
         },
-        ROOK("R"){
+        ROOK("R",500){
             public boolean isKing(){
                 return false;
             }
@@ -91,7 +91,7 @@ public abstract class Figure {
                 return true;
             }
         },
-        QUEEN("Q"){
+        QUEEN("Q",900){
             public boolean isKing(){
                 return false;
             }
@@ -99,7 +99,7 @@ public abstract class Figure {
                 return false;
             }
         },
-        KING("K"){
+        KING("K",10000){
             public boolean isKing(){
                 return true;
             }
@@ -109,12 +109,17 @@ public abstract class Figure {
         };
 
         private String figureName;
-        FigureType(String figureName){
+        private int figureValue;
+        FigureType(String figureName, int figureValue){
             this.figureName = figureName;
+            this.figureValue=figureValue;
         }
         @Override
         public String toString(){
             return this.figureName;
+        }
+        public int getFigureValue(){
+            return this.figureValue;
         }
         public abstract boolean isKing();
         public abstract boolean isRook();
