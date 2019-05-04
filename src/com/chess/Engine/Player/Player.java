@@ -4,7 +4,8 @@ import com.chess.Engine.Alliance;
 import com.chess.Engine.Figures.Figure;
 import com.chess.Engine.Figures.King;
 import com.chess.Engine.Board.Board;
-import com.chess.Engine.Board.Move;
+import com.chess.Engine.Move.Move;
+import com.chess.Engine.Move.MoveTransition;
 import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;
@@ -24,7 +25,13 @@ public abstract class Player {
         this.board = board;
         this.playerKing = establishKing();
         this.isInCheck = !Player.calculateAttackOnField(this.playerKing.getPosition(), opponentLegals).isEmpty();
+
+        if(calculateKingCastles(playerLegals,opponentLegals).size() < 0) {
+            playerLegals.addAll(calculateKingCastles(playerLegals, opponentLegals));
+        }
+
         this.playerLegals = ImmutableList.copyOf(playerLegals);
+
     }
 
 
@@ -75,7 +82,7 @@ public abstract class Player {
 
     public MoveTransition makeMove(final Move move){
         if(!isMoveLegal(move)){
-            return new MoveTransition(this.board, move, MoveStatus.ILLEGAL_MOVE);
+            return new MoveTransition(this.board, move, MoveTransition.MoveStatus.ILLEGAL_MOVE);
         }
         final Board transitionBoard = move.execute();
 
@@ -83,9 +90,9 @@ public abstract class Player {
                 transitionBoard.currentPlayer().getOpponent().getPlayerKing().getPosition(),
                 transitionBoard.currentPlayer().getPlayerMoves());
         if(!kingAttacks.isEmpty()){
-            return new MoveTransition(this.board, move, MoveStatus.LEAVE_PLAYER_IN_CHECK);
+            return new MoveTransition(this.board, move, MoveTransition.MoveStatus.LEAVE_PLAYER_IN_CHECK);
         }
-        return new MoveTransition(transitionBoard, move, MoveStatus.DONE);
+        return new MoveTransition(transitionBoard, move, MoveTransition.MoveStatus.DONE);
     }
 
     protected boolean canEscape() {

@@ -1,11 +1,10 @@
 package com.chess.Gui;
 
 import com.chess.Engine.Board.Board;
-import com.chess.Engine.Board.BoardUtils;
 import com.chess.Engine.Board.Field;
-import com.chess.Engine.Board.Move;
+import com.chess.Engine.Move.Move;
 import com.chess.Engine.Figures.Figure;
-import com.chess.Engine.Player.MoveTransition;
+import com.chess.Engine.Move.MoveTransition;
 import com.google.common.collect.Lists;
 
 import javax.imageio.ImageIO;
@@ -108,7 +107,7 @@ public class Table {
         BoardPanel(){
             super(new GridLayout(8,8));
             this.boardFields = new ArrayList<>();
-            for(int i=0 ;i< BoardUtils.numFields ;i++){
+            for(int i = 0; i< Board.BoardUtils.numFields ; i++){
                 final FieldPanel fieldPanel = new FieldPanel(this, i);
                 this.boardFields.add(fieldPanel);
                 add(fieldPanel);
@@ -213,15 +212,15 @@ public class Table {
         }
 
         private void assignFieldColor() {
-            if (BoardUtils.firstRow[this.fieldID] ||
-                    BoardUtils.thirdRow[this.fieldID] ||
-                    BoardUtils.fifthRow[this.fieldID] ||
-                    BoardUtils.seventhRow[this.fieldID]) {
+            if (Board.BoardUtils.firstRow[this.fieldID] ||
+                    Board.BoardUtils.thirdRow[this.fieldID] ||
+                    Board.BoardUtils.fifthRow[this.fieldID] ||
+                    Board.BoardUtils.seventhRow[this.fieldID]) {
                 setBackground(this.fieldID % 2 == 0 ? lightTileColor : darkTileColor);
-            } else if(BoardUtils.secondRow[this.fieldID] ||
-                    BoardUtils.fourthRow[this.fieldID] ||
-                    BoardUtils.sixthRow[this.fieldID]  ||
-                    BoardUtils.eighthRow[this.fieldID]) {
+            } else if(Board.BoardUtils.secondRow[this.fieldID] ||
+                    Board.BoardUtils.fourthRow[this.fieldID] ||
+                    Board.BoardUtils.sixthRow[this.fieldID]  ||
+                    Board.BoardUtils.eighthRow[this.fieldID]) {
                 setBackground(this.fieldID % 2 != 0 ? lightTileColor : darkTileColor);
             }
         }

@@ -2,9 +2,8 @@ package com.chess.Engine.Figures;
 
 import com.chess.Engine.Alliance;
 import com.chess.Engine.Board.Board;
-import com.chess.Engine.Board.BoardUtils;
-import com.chess.Engine.Board.Move;
-import com.chess.Engine.Board.Move.*;
+import com.chess.Engine.Move.Move;
+import com.chess.Engine.Move.Move.*;
 import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ public class Pawn extends Figure{
         final List<Move> possibleMoves = new ArrayList<>();
         for(final int currentPossibleMove:possiblyMoveTable){
             final int currentDestinationCoordinate = this.position+(this.alliance.getDirection() * currentPossibleMove);
-            if(!BoardUtils.isValidCoordinate(currentDestinationCoordinate)){
+            if(!Board.BoardUtils.isValidCoordinate(currentDestinationCoordinate)){
                 continue;
             }
             if(currentPossibleMove == 8 && board.getField(currentDestinationCoordinate).isEmpty()){
@@ -45,16 +44,16 @@ public class Pawn extends Figure{
                 }
             }
             else if(currentPossibleMove == 16 && this.isFirstMove() &&
-                    ((BoardUtils.secondRow[this.position] && this.getAlliance().isBlack()) ||
-                    (BoardUtils.seventhRow[this.position] && !this.getAlliance().isBlack()))){
+                    ((Board.BoardUtils.secondRow[this.position] && this.getAlliance().isBlack()) ||
+                    (Board.BoardUtils.seventhRow[this.position] && !this.getAlliance().isBlack()))){
                 final int behindTemp = this.position + (this.getAlliance().getDirection() * 8);
                 if(board.getField(behindTemp).isEmpty() && board.getField(currentDestinationCoordinate).isEmpty()){
                     possibleMoves.add(new PawnJump(board, this, currentDestinationCoordinate));
                 }
             }
             else if(currentPossibleMove == 7 &&
-                    !((BoardUtils.eighthColumn[this.position] && !this.alliance.isBlack()) ||
-                    (BoardUtils.firstColumn[this.position] && this.alliance.isBlack()))){
+                    !((Board.BoardUtils.eighthColumn[this.position] && !this.alliance.isBlack()) ||
+                    (Board.BoardUtils.firstColumn[this.position] && this.alliance.isBlack()))){
                 if(!board.getField(currentDestinationCoordinate).isEmpty()){
                     Figure figureOnCandidate = board.getField(currentDestinationCoordinate).getFigure();
                     if(this.alliance != figureOnCandidate.alliance){
@@ -85,8 +84,8 @@ public class Pawn extends Figure{
                 }
             }
             else if(currentPossibleMove == 9 &&
-                    !((BoardUtils.eighthColumn[this.position] && this.alliance.isBlack()) ||
-                      (BoardUtils.firstColumn[this.position] && !this.alliance.isBlack()))){
+                    !((Board.BoardUtils.eighthColumn[this.position] && this.alliance.isBlack()) ||
+                      (Board.BoardUtils.firstColumn[this.position] && !this.alliance.isBlack()))){
                 if(!board.getField(currentDestinationCoordinate).isEmpty()){
                     Figure figureOnCandidate = board.getField(currentDestinationCoordinate).getFigure();
                     if(this.alliance != figureOnCandidate.alliance){

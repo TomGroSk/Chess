@@ -1,5 +1,6 @@
-package com.chess.Engine.Board;
+package com.chess.Engine.Move;
 
+import com.chess.Engine.Board.Board;
 import com.chess.Engine.Board.Board.Builder;
 import com.chess.Engine.Figures.Figure;
 import com.chess.Engine.Figures.Pawn;
@@ -100,7 +101,7 @@ public abstract class Move {
 
         @Override
         public String toString(){
-            return movedFigure.getFigureType().toString() + BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
+            return movedFigure.getFigureType().toString() + Board.BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
         }
     }
     
@@ -148,7 +149,7 @@ public abstract class Move {
         }
         @Override
         public String toString(){
-            return movedFigure.getFigureType() + BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
+            return movedFigure.getFigureType() + Board.BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
         }
     }
 
@@ -163,7 +164,7 @@ public abstract class Move {
         }
         @Override
         public String toString(){
-            return BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
+            return Board.BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
         }
     }
 
@@ -234,8 +235,8 @@ public abstract class Move {
         }
         @Override
         public String toString(){
-            return BoardUtils.getPositionAtCoordinate(this.movedFigure.getPosition()).substring(0,1) +
-                    "x" +BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
+            return Board.BoardUtils.getPositionAtCoordinate(this.movedFigure.getPosition()).substring(0,1) +
+                    "x" + Board.BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
         }
     }
 
@@ -267,8 +268,8 @@ public abstract class Move {
         }
         @Override
         public String toString(){
-            return BoardUtils.getPositionAtCoordinate(this.movedFigure.getPosition()).substring(0,1) +
-                    "x" +BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
+            return Board.BoardUtils.getPositionAtCoordinate(this.movedFigure.getPosition()).substring(0,1) +
+                    "x" + Board.BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
         }
     }
 
@@ -298,7 +299,7 @@ public abstract class Move {
         }
         @Override
         public String toString(){
-            return BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
+            return Board.BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
         }
 
     }

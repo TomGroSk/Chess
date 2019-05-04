@@ -5,7 +5,7 @@ import com.chess.Engine.Board.Field;
 import com.chess.Engine.Figures.Figure;
 import com.chess.Engine.Figures.Rook;
 import com.chess.Engine.Board.Board;
-import com.chess.Engine.Board.Move;
+import com.chess.Engine.Move.Move;
 import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;

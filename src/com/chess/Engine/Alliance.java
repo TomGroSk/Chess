@@ -1,6 +1,6 @@
 package com.chess.Engine;
 
-import com.chess.Engine.Board.BoardUtils;
+import com.chess.Engine.Board.Board;
 import com.chess.Engine.Player.BlackPlayer;
 import com.chess.Engine.Player.Player;
 import com.chess.Engine.Player.WhitePlayer;
@@ -29,7 +29,7 @@ public enum Alliance {
 
         @Override
         public boolean isPawnPromotionSquare(int position) {
-            return BoardUtils.firstRow[position];
+            return Board.BoardUtils.firstRow[position];
         }
     },
     black{
@@ -50,7 +50,7 @@ public enum Alliance {
 
         @Override
         public boolean isPawnPromotionSquare(int position) {
-            return BoardUtils.eighthRow[position];
+            return Board.BoardUtils.eighthRow[position];
         }
 
         @Override

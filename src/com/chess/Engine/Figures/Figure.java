@@ -2,7 +2,7 @@ package com.chess.Engine.Figures;
 
 import com.chess.Engine.Alliance;
 import com.chess.Engine.Board.Board;
-import com.chess.Engine.Board.Move;
+import com.chess.Engine.Move.Move;
 
 import java.util.Collection;
 

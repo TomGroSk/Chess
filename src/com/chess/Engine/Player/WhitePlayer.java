@@ -5,7 +5,7 @@ import com.chess.Engine.Board.Field;
 import com.chess.Engine.Figures.Figure;
 import com.chess.Engine.Figures.Rook;
 import com.chess.Engine.Board.Board;
-import com.chess.Engine.Board.Move;
+import com.chess.Engine.Move.Move;
 import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;
@@ -34,6 +34,11 @@ public class WhitePlayer extends Player {
 
     @Override
     protected Collection<Move> calculateKingCastles(final Collection<Move> playerLegals, final Collection<Move> opponentsLegals) {
+
+        if(this.isInCheck() || this.isCastled()) {
+            return ImmutableList.of();
+        }
+
         final List<Move> kingCastles = new ArrayList<>();
 
         if(this.playerKing.isFirstMove() && !this.isInCheck()){

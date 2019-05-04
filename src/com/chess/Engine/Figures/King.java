@@ -2,10 +2,9 @@ package com.chess.Engine.Figures;
 
 import com.chess.Engine.Alliance;
 import com.chess.Engine.Board.Board;
-import com.chess.Engine.Board.BoardUtils;
 import com.chess.Engine.Board.Field;
-import com.chess.Engine.Board.Move;
-import com.chess.Engine.Board.Move.*;
+import com.chess.Engine.Move.Move;
+import com.chess.Engine.Move.Move.*;
 import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;
@@ -34,7 +33,7 @@ public class King extends Figure {
                     isAtEighthColumn(this.position, currentPossibleMove)){
                 continue;
             }
-            if(BoardUtils.isValidCoordinate(temp)){
+            if(Board.BoardUtils.isValidCoordinate(temp)){
                 final Field possiblyDestinationField = board.getField(temp);
                 if(possiblyDestinationField.isEmpty()){
                     possibleMoves.add(new MajorMove(board, this, temp));
@@ -47,6 +46,7 @@ public class King extends Figure {
                     }
                 }
             }
+
         }
         return ImmutableList.copyOf(possibleMoves);
     }
@@ -61,12 +61,12 @@ public class King extends Figure {
         return FigureType.KING.toString();
     }
     private static boolean isAtFirstColumn(final int currentPosition, final int candidateMove){
-        return BoardUtils.firstColumn[currentPosition] && ((candidateMove==-9) || (candidateMove==-1) ||
+        return Board.BoardUtils.firstColumn[currentPosition] && ((candidateMove==-9) || (candidateMove==-1) ||
                 (candidateMove==7));
     }
 
     private static boolean isAtEighthColumn(final int currentPosition, final int candidateMove){
-        return BoardUtils.secondColumn[currentPosition] && ((candidateMove==-7) || (candidateMove==1) ||
+        return Board.BoardUtils.secondColumn[currentPosition] && ((candidateMove==-7) || (candidateMove==1) ||
                 (candidateMove==9));
     }
 }

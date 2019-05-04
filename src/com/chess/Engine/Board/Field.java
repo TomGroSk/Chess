@@ -22,7 +22,7 @@ public abstract class Field {
     private static Map<Integer, EmptyField> createAllEmptyFields() {
         final Map<Integer, EmptyField> emptyFieldMap = new HashMap<>();
 
-        for (int i=0;i<BoardUtils.numFields;i++){
+        for (int i = 0; i< Board.BoardUtils.numFields; i++){
             emptyFieldMap.put(i, new EmptyField(i));
         }
         return ImmutableMap.copyOf(emptyFieldMap);

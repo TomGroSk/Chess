@@ -2,10 +2,9 @@ package com.chess.Engine.Figures;
 
 import com.chess.Engine.Alliance;
 import com.chess.Engine.Board.Board;
-import com.chess.Engine.Board.BoardUtils;
 import com.chess.Engine.Board.Field;
-import com.chess.Engine.Board.Move;
-import com.chess.Engine.Board.Move.*;
+import com.chess.Engine.Move.Move;
+import com.chess.Engine.Move.Move.*;
 import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;
@@ -31,13 +30,13 @@ public class Rook extends Figure {
         int temp ;
         for(final int currentPossibleMove:possiblyMoveTable){
             temp = this.position;
-            while (BoardUtils.isValidCoordinate(temp)){
+            while (Board.BoardUtils.isValidCoordinate(temp)){
                 if(isAtFirstColumn(temp, currentPossibleMove) ||
                         isAtEighthColumn(temp, currentPossibleMove)){
                     break;
                 }
                 temp +=currentPossibleMove;
-                if(BoardUtils.isValidCoordinate(temp)){
+                if(Board.BoardUtils.isValidCoordinate(temp)){
                     final Field possiblyDestinationField = board.getField(temp);
                     if(possiblyDestinationField.isEmpty()){
                         possibleMoves.add(new MajorMove(board, this, temp));
@@ -56,10 +55,10 @@ public class Rook extends Figure {
         return ImmutableList.copyOf(possibleMoves);
     }
     private static boolean isAtFirstColumn(final int currentPosition, final int candidateMove){
-        return BoardUtils.firstColumn[currentPosition] && (candidateMove == -1);
+        return Board.BoardUtils.firstColumn[currentPosition] && (candidateMove == -1);
     }
     private static boolean isAtEighthColumn(final int currentPosition, final int candidateMove){
-        return BoardUtils.eighthColumn[currentPosition] && (candidateMove == 1);
+        return Board.BoardUtils.eighthColumn[currentPosition] && (candidateMove == 1);
     }
     @Override
     public String toString(){
