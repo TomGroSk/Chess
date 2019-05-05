@@ -101,7 +101,7 @@ public abstract class Move {
 
         @Override
         public String toString(){
-            return movedFigure.getFigureType().toString() + Board.BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
+            return  movedFigure.getFigureType().toString() +  Board.BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
         }
     }
     

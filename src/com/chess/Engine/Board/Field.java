@@ -35,10 +35,6 @@ public abstract class Field {
     public abstract boolean isEmpty();
     public abstract Figure getFigure();
 
-
-
-
-
     public static final class EmptyField extends Field{
         private EmptyField(int coordinate) {
             super(coordinate);

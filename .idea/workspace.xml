@@ -3,25 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="26af3ecc-41d4-492a-a259-8e0de34de75e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Alliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Board/BoardUtils.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Board/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Board/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Board/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Move/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Figures/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Figures/Bishop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Figures/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Figures/Figure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Figures/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Figures/King.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Figures/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Figures/Knight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Figures/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Figures/Pawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Figures/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Figures/Queen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Figures/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Figures/Rook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Player/BlackPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Player/BlackPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Player/MoveStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Player/MoveTransition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Move/MoveTransition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Player/WhitePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Player/WhitePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/Gui/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Gui/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/JChess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chess/Engine/Move/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/Engine/Move/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tests/chess/Engine/Board/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tests/chess/Engine/Board/BoardTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,39 +20,41 @@
     <session id="-1697571717">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="25" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="4" />
           <entry key="project.open.time.16" value="6" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.3" value="5" />
           <entry key="project.open.time.4" value="6" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
-          <entry key="java" value="150" />
+          <entry key="java" value="170" />
+          <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="150" />
+          <entry key="JAVA" value="170" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="28" />
-          <entry key="java" value="14831" />
+          <entry key="java" value="15042" />
           <entry key="txt" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14831" />
+          <entry key="JAVA" value="15042" />
           <entry key="PLAIN_TEXT" value="49" />
         </counts>
       </usages-collector>
@@ -74,39 +62,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Player/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="38" column="58" lean-forward="true" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+            <state relative-caret-position="-34">
+              <caret line="37" column="76" selection-start-line="37" selection-start-column="76" selection-end-line="37" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1569#1570#0" expanded="true" />
-                <element signature="e#1607#1608#0" expanded="true" />
-                <element signature="e#1655#1656#0" expanded="true" />
-                <element signature="e#1695#1696#0" expanded="true" />
-                <element signature="e#2023#2024#0" expanded="true" />
-                <element signature="e#2078#2079#0" expanded="true" />
-                <element signature="e#2110#2111#0" expanded="true" />
-                <element signature="e#2147#2148#0" expanded="true" />
-                <element signature="e#2183#2184#0" expanded="true" />
-                <element signature="e#2236#2237#0" expanded="true" />
-                <element signature="e#2273#2274#0" expanded="true" />
-                <element signature="e#2327#2328#0" expanded="true" />
-                <element signature="e#2360#2361#0" expanded="true" />
-                <element signature="e#2388#2389#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/tests/chess/Engine/Board/BoardTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-50">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Player/WhitePlayer.java">
+        <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Board/Field.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="17">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Board/Board.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-268">
+              <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="85" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2278#2279#0" expanded="true" />
+                <element signature="e#2318#2319#0" expanded="true" />
+                <element signature="e#3611#3612#0" expanded="true" />
+                <element signature="e#3659#3660#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,22 +169,24 @@
         <option value="$PROJECT_DIR$/src/com/chess/Engine/Figures/Knight.java" />
         <option value="$PROJECT_DIR$/src/com/chess/Engine/Alliance.java" />
         <option value="$PROJECT_DIR$/src/com/chess/Engine/Figures/Pawn.java" />
-        <option value="$PROJECT_DIR$/src/com/chess/Engine/Figures/Figure.java" />
-        <option value="$PROJECT_DIR$/src/com/tests/chess/Engine/Board/BoardTest.java" />
         <option value="$PROJECT_DIR$/src/com/chess/JChess.java" />
         <option value="$USER_HOME$/Desktop/BlackWidow-Chess-master/src/com/chess/engine/classic/pieces/Bishop.java" />
         <option value="$PROJECT_DIR$/src/com/chess/Engine/Figures/Queen.java" />
         <option value="$PROJECT_DIR$/src/com/chess/Engine/Figures/Rook.java" />
-        <option value="$PROJECT_DIR$/src/com/chess/Engine/Board/Board.java" />
-        <option value="$PROJECT_DIR$/src/com/chess/Engine/Board/Field.java" />
         <option value="$PROJECT_DIR$/src/com/chess/Engine/Board/Move.java" />
         <option value="$PROJECT_DIR$/src/com/chess/Gui/Table.java" />
         <option value="$PROJECT_DIR$/src/com/chess/Engine/Player/MoveStatus.java" />
         <option value="$PROJECT_DIR$/src/com/chess/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/chess/Engine/Figures/Bishop.java" />
         <option value="$PROJECT_DIR$/src/com/chess/Engine/Figures/King.java" />
         <option value="$PROJECT_DIR$/src/com/chess/Engine/Player/WhitePlayer.java" />
         <option value="$PROJECT_DIR$/src/com/chess/Engine/Player/Player.java" />
+        <option value="$PROJECT_DIR$/src/com/chess/Engine/Figures/Bishop.java" />
+        <option value="$PROJECT_DIR$/src/com/chess/Engine/Figures/Figure.java" />
+        <option value="$PROJECT_DIR$/src/com/chess/Engine/Board/Field.java" />
+        <option value="$PROJECT_DIR$/src/com/chess/Engine/Move/Move.java" />
+        <option value="$USER_HOME$/Desktop/BlackWidow-Chess-master/tests/com/chess/tests/TestPieces.java" />
+        <option value="$PROJECT_DIR$/src/com/chess/Engine/Board/Board.java" />
+        <option value="$PROJECT_DIR$/src/com/tests/chess/Engine/Board/BoardTest.java" />
       </list>
     </option>
   </component>
@@ -199,6 +203,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -224,19 +230,67 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="chess" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chess" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="chess" type="462c0819:PsiDirectoryNode" />
+              <item name="Engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chess" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="chess" type="462c0819:PsiDirectoryNode" />
+              <item name="Engine" type="462c0819:PsiDirectoryNode" />
+              <item name="Board" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chess" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="chess" type="462c0819:PsiDirectoryNode" />
+              <item name="Engine" type="462c0819:PsiDirectoryNode" />
+              <item name="Figures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chess" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="chess" type="462c0819:PsiDirectoryNode" />
+              <item name="Engine" type="462c0819:PsiDirectoryNode" />
+              <item name="Move" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chess" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="chess" type="462c0819:PsiDirectoryNode" />
+              <item name="Gui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chess" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="Board" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556980034251" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557056043566" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -246,6 +300,13 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.engine.Player" />
+      <recent name="com.engine.Board" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.tests.chess.Engine.Board" />
     </key>
@@ -257,12 +318,9 @@
       <recent name="com.chess.Engine.Board" />
       <recent name="com.chess.Engine.Move" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.engine.Player" />
-      <recent name="com.engine.Board" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tomputer\Chess" />
+      <recent name="C:\Users\Tomputer\Chess\asset\art" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -277,13 +335,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="JChess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.engine.JChess" />
+  <component name="RunManager" selected="JUnit.BoardTest">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chess.Main" />
       <module name="Chess" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.engine.*" />
+          <option name="PATTERN" value="com.chess.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -344,19 +402,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BoardTest.testKingEquality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Chess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tests.chess.Engine.Board.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tests.chess.Engine.Board" />
+      <option name="MAIN_CLASS_NAME" value="com.tests.chess.Engine.Board.BoardTest" />
+      <option name="METHOD_NAME" value="testKingEquality" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.JChess" />
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.BoardTest" />
       <item itemvalue="JUnit.BoardTest.initialBoard" />
+      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="JUnit.BoardTest.testKingEquality" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BoardTest" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="JUnit.BoardTest.testKingEquality" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BoardTest.initialBoard" />
-        <item itemvalue="Application.JChess" />
       </list>
     </recent_temporary>
   </component>
@@ -382,34 +457,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BoardTest_initialBoard - 2019.05.03 at 13h 20m 35s.xml">
-      <configuration name="BoardTest.initialBoard" configurationId="JUnit" />
+    <history-entry file="BoardTest_testKingEquality - 2019.05.05 at 13h 16m 50s.xml">
+      <configuration name="BoardTest.testKingEquality" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest - 2019.05.03 at 13h 20m 59s.xml">
+    <history-entry file="BoardTest_testKingEquality - 2019.05.05 at 13h 21m 36s.xml">
+      <configuration name="BoardTest.testKingEquality" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_testKingEquality - 2019.05.05 at 13h 21m 42s.xml">
+      <configuration name="BoardTest.testKingEquality" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_testKingEquality - 2019.05.05 at 13h 23m 55s.xml">
+      <configuration name="BoardTest.testKingEquality" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_testKingEquality - 2019.05.05 at 13h 24m 01s.xml">
+      <configuration name="BoardTest.testKingEquality" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_testKingEquality - 2019.05.05 at 13h 25m 28s.xml">
+      <configuration name="BoardTest.testKingEquality" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_testKingEquality - 2019.05.05 at 13h 26m 12s.xml">
+      <configuration name="BoardTest.testKingEquality" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest - 2019.05.05 at 13h 33m 18s.xml">
       <configuration name="BoardTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest - 2019.05.03 at 13h 23m 14s.xml">
+    <history-entry file="BoardTest - 2019.05.05 at 13h 33m 51s.xml">
       <configuration name="BoardTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest - 2019.05.03 at 13h 23m 43s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest - 2019.05.03 at 13h 28m 27s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest - 2019.05.03 at 13h 28m 36s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest - 2019.05.03 at 13h 35m 20s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest - 2019.05.03 at 13h 36m 52s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest - 2019.05.03 at 13h 37m 03s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest - 2019.05.03 at 13h 37m 55s.xml">
+    <history-entry file="BoardTest - 2019.05.05 at 13h 34m 04s.xml">
       <configuration name="BoardTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -424,8 +499,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.1793313" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.18161094" />
       <window_info id="Structure" order="1" sideWeight="0.50163937" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -434,8 +510,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924013" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26885247" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.28360656" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45901638" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.33934426" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
@@ -473,13 +549,6 @@
     <entry file="file://$USER_HOME$/Desktop/Chess/src/com/chess/Engine/Board/Move.java" />
     <entry file="file://$USER_HOME$/Desktop/BlackWidow-Chess-master/src/com/chess/engine/classic/board/BoardUtils.java" />
     <entry file="file://$USER_HOME$/Desktop/BlackWidow-Chess-master/tests/com/chess/tests/ChessTestSuite.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Figures/Figure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/BlackWidow-Chess-master/tests/com/chess/tests/TestBoard.java" />
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/reflect/Method.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -490,43 +559,11 @@
     </entry>
     <entry file="file://$USER_HOME$/Desktop/BlackWidow-Chess-master/tests/com/chess/tests/TestEngine.java" />
     <entry file="file://$USER_HOME$/Desktop/BlackWidow-Chess-master/tests/com/chess/tests/TestPlayer.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tests/chess/Engine/Board/BoardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="55" lean-forward="true" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/BlackWidow-Chess-master/src/com/chess/engine/classic/pieces/Bishop.java" />
     <entry file="jar://$PROJECT_DIR$/asset/guava-21.0.jar!/com/google/common/collect/Iterables.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Figures/Knight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chess/Gui/Table.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="60" column="43" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -561,17 +598,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Player/MoveStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="e#119#120#0" expanded="true" />
-            <element signature="e#154#155#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Player/MoveStatus.java" />
     <entry file="file://$PROJECT_DIR$/src/com/chess/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -579,51 +606,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Board/BoardUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="73" column="57" lean-forward="true" selection-start-line="73" selection-start-column="57" selection-end-line="73" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Board/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2668">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2318#2319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Board/BoardUtils.java" />
     <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Move/MoveTransition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Board/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Figures/Bishop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -637,27 +624,10 @@
         <state relative-caret-position="-102" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Figures/King.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Alliance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Move/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4355">
-          <caret line="66" column="26" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -694,15 +664,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="81" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="e#2302#2303#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Player/WhitePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
+        <state relative-caret-position="782">
           <caret line="62" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -710,26 +677,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Player/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Figures/Knight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" column="58" lean-forward="true" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+        <state relative-caret-position="387">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1569#1570#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
-            <element signature="e#1655#1656#0" expanded="true" />
-            <element signature="e#1695#1696#0" expanded="true" />
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2078#2079#0" expanded="true" />
-            <element signature="e#2110#2111#0" expanded="true" />
-            <element signature="e#2147#2148#0" expanded="true" />
-            <element signature="e#2183#2184#0" expanded="true" />
-            <element signature="e#2236#2237#0" expanded="true" />
-            <element signature="e#2273#2274#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2360#2361#0" expanded="true" />
-            <element signature="e#2388#2389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="37" column="76" selection-start-line="37" selection-start-column="76" selection-end-line="37" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Figures/Bishop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Figures/Figure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="127" column="52" lean-forward="true" selection-start-line="127" selection-start-column="52" selection-end-line="127" selection-end-column="52" />
+          <folding>
+            <element signature="e#3343#3344#0" expanded="true" />
+            <element signature="e#3390#3391#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Move/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="106" column="4" lean-forward="true" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chess/Gui/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="158" column="42" selection-start-line="158" selection-start-column="42" selection-end-line="158" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Figures/King.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/BlackWidow-Chess-master/tests/com/chess/tests/TestPieces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="486" column="4" lean-forward="true" selection-start-line="486" selection-start-column="4" selection-end-line="492" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/jdk/internal/reflect/DelegatingMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="571" column="6" selection-start-line="571" selection-start-column="6" selection-end-line="571" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Board/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/chess/Engine/Board/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-268">
+          <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="85" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2278#2279#0" expanded="true" />
+            <element signature="e#2318#2319#0" expanded="true" />
+            <element signature="e#3611#3612#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tests/chess/Engine/Board/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

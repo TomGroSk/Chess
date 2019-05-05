@@ -208,8 +208,8 @@ public class Board {
         public static boolean[] seventhRow = initRow(48);
         public static boolean[] eighthRow = initRow(56);
 
-        public static final String[] ALGEBRAIC_NOTATION = initAlgebricNotation();
-        public static final Map<String, Integer> POSITION_TO_COORDINATE = initPositionToCoordinate();
+        private static final String[] ALGEBRAIC_NOTATION = initAlgebricNotation();
+        private static final Map<String, Integer> POSITION_TO_COORDINATE = initPositionToCoordinate();
 
         private static boolean[] initRow(int i) {
             final boolean[] row = new boolean[numFields];
@@ -220,7 +220,7 @@ public class Board {
         }
 
         public final static int numFields = 64;
-        public final static int numFieldsPerRow = 8;
+        private final static int numFieldsPerRow = 8;
 
 
 
