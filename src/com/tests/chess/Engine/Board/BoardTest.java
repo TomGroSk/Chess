@@ -7,7 +7,6 @@ import com.chess.Engine.Figures.King;
 import com.chess.Engine.Figures.Knight;
 import com.chess.Engine.Figures.Queen;
 import com.chess.Engine.Move.Move;
-import com.chess.Engine.Move.MoveTransition;
 import org.junit.Test;
 
 import java.util.Collection;
