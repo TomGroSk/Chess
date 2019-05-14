@@ -1,63 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26af3ecc-41d4-492a-a259-8e0de34de75e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Alliance$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Alliance$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Alliance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Board/Board$BoardUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Board/Board$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Board/Board.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Board/Field$EmptyField.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Board/Field$OccupiedField.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Board/Field.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/Bishop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/Figure$FigureType$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/Figure$FigureType$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/Figure$FigureType$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/Figure$FigureType$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/Figure$FigureType$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/Figure$FigureType$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/Figure$FigureType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/Figure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/King.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/Knight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/Pawn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/Queen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Figures/Rook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move$AttackMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move$CastleMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move$KingCastleMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move$MajorAttackMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move$MajorMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move$MoveFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move$NullMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move$PawnAttackMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move$PawnEnPassantAttackMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move$PawnJump.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move$PawnMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move$PawnPromotion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move$QueenCastleMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/Move.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/MoveTransition$MoveStatus$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/MoveTransition$MoveStatus$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/MoveTransition$MoveStatus$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/MoveTransition$MoveStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Move/MoveTransition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Player/BlackPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Player/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Engine/Player/WhitePlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Gui/Table$BoardDirection$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Gui/Table$BoardDirection$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Gui/Table$BoardDirection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Gui/Table$BoardPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Gui/Table$FieldPanel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Gui/Table$FieldPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Gui/Table.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/chess/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/com/tests/chess/Engine/Board/BoardTest.class" beforeDir="false" />
-    </list>
+    <list default="true" id="26af3ecc-41d4-492a-a259-8e0de34de75e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +13,7 @@
     <session id="-1697571717">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="37" />
+          <entry key="project.closed" value="38" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.14" value="4" />
@@ -354,7 +298,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557852463746" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557852464770" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -574,7 +518,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924013" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19508196" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19508196" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.33934426" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
