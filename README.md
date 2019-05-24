@@ -1,3 +1,3 @@
 # Chess
 
-Chess in java. Created by learning Java from youtube tutorial.
+Chess in java. Created by learning Java from internet course.
