@@ -58,6 +58,10 @@ public abstract class Figure {
         return this.position;
     }
 
+    public int getFigureValue() {
+        return this.figureType.figureValue;
+    }
+
     public enum FigureType{
         PAWN("P",100){
             public boolean isKing(){
