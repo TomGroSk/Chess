@@ -26,7 +26,7 @@ public abstract class Player {
         this.playerKing = establishKing();
         this.isInCheck = !Player.calculateAttackOnField(this.playerKing.getPosition(), opponentLegals).isEmpty();
 
-        if(calculateKingCastles(playerLegals,opponentLegals).size() < 0) {
+        if(playerLegals.isEmpty() || opponentLegals.isEmpty()) {
             playerLegals.addAll(calculateKingCastles(playerLegals, opponentLegals));
         }
 
@@ -76,9 +76,6 @@ public abstract class Player {
         return !this.isInCheck && !canEscape();
     }
 
-    public boolean isCastled(){
-        return false;
-    }
 
     public MoveTransition makeMove(final Move move){
         if(!isMoveLegal(move)){

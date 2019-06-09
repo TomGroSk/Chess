@@ -35,7 +35,7 @@ public class WhitePlayer extends Player {
     @Override
     protected Collection<Move> calculateKingCastles(final Collection<Move> playerLegals, final Collection<Move> opponentsLegals) {
 
-        if(this.isInCheck() || this.isCastled()) {
+        if(this.isInCheck()) {
             return ImmutableList.of();
         }
 

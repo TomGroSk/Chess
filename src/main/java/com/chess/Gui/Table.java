@@ -18,8 +18,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
+import static com.chess.Engine.Move.Move.MoveFactory.createMove;
 import static javax.swing.SwingUtilities.invokeLater;
 import static javax.swing.SwingUtilities.isLeftMouseButton;
 import static javax.swing.SwingUtilities.isRightMouseButton;
@@ -187,7 +187,7 @@ public class Table extends Observable {
                         }
                         else{
                             destinationField = chessBoard.getField(fieldID);
-                            final Move move = Move.MoveFactory.createMove(chessBoard,
+                            final Move move = createMove(chessBoard,
                                     sourceField.getFieldCoordinate(),
                                     destinationField.getFieldCoordinate());
                             final MoveTransition transition = chessBoard.currentPlayer().makeMove(move);
@@ -293,11 +293,7 @@ public class Table extends Observable {
     }
 
     public void show() {
-        invokeLater(new Runnable() {
-            public void run() {
-                Table.get().getBoardPanel().drawBoard(Table.get().getGameBoard());
-            }
-        });
+        invokeLater(() -> Table.get().getBoardPanel().drawBoard(Table.get().getGameBoard()));
     }
 
     private void setupUpdate(GameSetup gameSetup) {
@@ -328,7 +324,7 @@ public class Table extends Observable {
     private static class AIThinkTank extends SwingWorker<Move, String>{
         private AIThinkTank(){}
         @Override
-        protected Move doInBackground() throws Exception {
+        protected Move doInBackground() {
             final MoveStrategy miniMax = new MiniMax(4);
             final Move bestMove = miniMax.execute(Table.get().getGameBoard());
             return bestMove;
@@ -341,9 +337,8 @@ public class Table extends Observable {
                 Table.get().updateGameBoard(Table.get().getGameBoard().currentPlayer().makeMove(bestMove).getTransitionBoard());
                 Table.get().getBoardPanel().drawBoard(Table.get().getGameBoard());
                 Table.get().moveMadeUpdate(PlayerType.computer);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
+            }
+            catch (final Exception e) {
                 e.printStackTrace();
             }
         }

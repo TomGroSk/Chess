@@ -7,7 +7,6 @@ import com.chess.Engine.Player.Player;
 public final class StandardBoardEvaluator implements BoardEvaluator {
     private final static int CHECK_MATE_BONUS = 10000;
     private final static int CHECK_BONUS = 50;
-    private final static int CASTLE_BONUS = 60;
     private final static int MOBILITY_MULTIPLIER = 2;
     @Override
     public int evaluate(Board board, int depth) {
@@ -16,7 +15,7 @@ public final class StandardBoardEvaluator implements BoardEvaluator {
     private static int score(final Player player,
                              final int depth) {
         return pieceValue(player) + check(player) + checkMate(player, depth)
-                + mobility(player) + castled(player);
+                + mobility(player);
     }
 
     private static int pieceValue(Player player) {
@@ -42,8 +41,5 @@ public final class StandardBoardEvaluator implements BoardEvaluator {
         return player.getOpponent().isInCheckMate() ? CHECK_MATE_BONUS  * depthBonus(depth) : 0;
     }
 
-    private static int castled(final Player player) {
-        return player.isCastled() ? CASTLE_BONUS : 0;
-    }
 
 }
