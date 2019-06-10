@@ -325,7 +325,7 @@ public class Table extends Observable {
         private AIThinkTank(){}
         @Override
         protected Move doInBackground() {
-            final MoveStrategy miniMax = new MiniMax(4);
+            final MoveStrategy miniMax = new MiniMax(3);
             final Move bestMove = miniMax.execute(Table.get().getGameBoard());
             return bestMove;
         }
